@@ -171,6 +171,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="libmongocrypt.dylib" />
     <None Include="libmongocrypt.so" />
@@ -190,6 +191,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="mongocrypt.dll" />
+    <Content Include="Resources\ExitLogo.png" />
     <Content Include="Resources\MedMatchLogo.png" />
     <Content Include="Resources\MedMatchLogo2.png" />
   </ItemGroup>
