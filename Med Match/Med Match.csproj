@@ -191,6 +191,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="mongocrypt.dll" />
+    <None Include="Resources\bars-sort.png" />
     <Content Include="Resources\ExitLogo.png" />
     <Content Include="Resources\MedMatchLogo.png" />
     <Content Include="Resources\MedMatchLogo2.png" />

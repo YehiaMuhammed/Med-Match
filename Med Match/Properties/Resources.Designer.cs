@@ -63,6 +63,16 @@ namespace Med_Match.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap bars_sort {
+            get {
+                object obj = ResourceManager.GetObject("bars_sort", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap ExitLogo {
             get {
                 object obj = ResourceManager.GetObject("ExitLogo", resourceCulture);
