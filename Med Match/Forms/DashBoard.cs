@@ -32,7 +32,9 @@ namespace Med_Match
             {
                 // if side bar is minimize
                 Sidebar.Width -= 10;
-                if (Sidebar.Width == Sidebar.MinimumSize.Width)
+                Logout_panel.Width -= 10;
+
+                if (Sidebar.Width == Sidebar.MinimumSize.Width & Logout_panel.Width == Logout_panel.MinimumSize.Width)
                 {
                     SidebarExpand = false;
                     SidebarTimer.Stop();
@@ -42,8 +44,9 @@ namespace Med_Match
             {
                 // if side bar is maxmize
 
+                Logout_panel.Width += 10;
                 Sidebar.Width += 10;
-                if (Sidebar.Width == Sidebar.MaximumSize.Width)
+                if (Sidebar.Width == Sidebar.MaximumSize.Width & Logout_panel.Width == Logout_panel.MaximumSize.Width)
                 {
                     SidebarExpand = true;
                     SidebarTimer.Stop();
@@ -64,6 +67,7 @@ namespace Med_Match
             {
                 // if side users button is minimize
                 UsersPanel.Height -= 10;
+
                 if (UsersPanel.Height == UsersPanel.MinimumSize.Height)
                 {
                     UsersExpand = false;
@@ -95,5 +99,6 @@ namespace Med_Match
 
         }
 
+       
     }
 }

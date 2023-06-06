@@ -49,8 +49,8 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.Logout_panel = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
+            this.Logout_panel = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel4.SuspendLayout();
@@ -152,7 +152,7 @@
             this.button5.Font = new System.Drawing.Font("Bebas Neue", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button5.Image = ((System.Drawing.Image)(resources.GetObject("button5.Image")));
             this.button5.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button5.Location = new System.Drawing.Point(0, 302);
+            this.button5.Location = new System.Drawing.Point(0, 30);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(268, 47);
             this.button5.TabIndex = 2;
@@ -247,12 +247,11 @@
             this.Sidebar.Controls.Add(this.panel6);
             this.Sidebar.Controls.Add(this.panel4);
             this.Sidebar.Controls.Add(this.panel2);
-            this.Sidebar.Controls.Add(this.Logout_panel);
             this.Sidebar.Location = new System.Drawing.Point(-2, 0);
-            this.Sidebar.MaximumSize = new System.Drawing.Size(271, 800);
-            this.Sidebar.MinimumSize = new System.Drawing.Size(61, 800);
+            this.Sidebar.MaximumSize = new System.Drawing.Size(271, 728);
+            this.Sidebar.MinimumSize = new System.Drawing.Size(61, 728);
             this.Sidebar.Name = "Sidebar";
-            this.Sidebar.Size = new System.Drawing.Size(61, 800);
+            this.Sidebar.Size = new System.Drawing.Size(61, 728);
             this.Sidebar.TabIndex = 6;
             this.Sidebar.Paint += new System.Windows.Forms.PaintEventHandler(this.Sidebar_Paint);
             // 
@@ -285,15 +284,6 @@
             this.panel2.Size = new System.Drawing.Size(268, 47);
             this.panel2.TabIndex = 7;
             // 
-            // Logout_panel
-            // 
-            this.Logout_panel.AllowDrop = true;
-            this.Logout_panel.Controls.Add(this.button5);
-            this.Logout_panel.Location = new System.Drawing.Point(3, 448);
-            this.Logout_panel.Name = "Logout_panel";
-            this.Logout_panel.Size = new System.Drawing.Size(268, 352);
-            this.Logout_panel.TabIndex = 7;
-            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -305,11 +295,23 @@
             this.label1.TabIndex = 7;
             this.label1.Text = "Dashboard";
             // 
+            // Logout_panel
+            // 
+            this.Logout_panel.BackColor = System.Drawing.Color.MediumSeaGreen;
+            this.Logout_panel.Controls.Add(this.button5);
+            this.Logout_panel.Location = new System.Drawing.Point(-2, 723);
+            this.Logout_panel.MaximumSize = new System.Drawing.Size(271, 77);
+            this.Logout_panel.MinimumSize = new System.Drawing.Size(61, 77);
+            this.Logout_panel.Name = "Logout_panel";
+            this.Logout_panel.Size = new System.Drawing.Size(61, 77);
+            this.Logout_panel.TabIndex = 8;
+            // 
             // DashBoard
             // 
             this.AllowDrop = true;
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.ClientSize = new System.Drawing.Size(1400, 800);
+            this.Controls.Add(this.Logout_panel);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.Sidebar);
             this.Controls.Add(this.pictureBox2);
@@ -354,8 +356,8 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Panel Logout_panel;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Panel Logout_panel;
     }
 }
 
