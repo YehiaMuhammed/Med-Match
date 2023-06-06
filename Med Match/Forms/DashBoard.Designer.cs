@@ -49,7 +49,8 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.panel3 = new System.Windows.Forms.Panel();
+            this.Logout_panel = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel4.SuspendLayout();
@@ -60,7 +61,7 @@
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.panel2.SuspendLayout();
-            this.panel3.SuspendLayout();
+            this.Logout_panel.SuspendLayout();
             this.SuspendLayout();
             // 
             // SidebarTimer
@@ -83,9 +84,9 @@
             // 
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.pictureBox1.Image = global::Med_Match.Properties.Resources.MedMatchLogo;
-            this.pictureBox1.Location = new System.Drawing.Point(52, 3);
+            this.pictureBox1.Location = new System.Drawing.Point(21, 0);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(285, 171);
+            this.pictureBox1.Size = new System.Drawing.Size(260, 171);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
@@ -99,7 +100,7 @@
             this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button2.Location = new System.Drawing.Point(0, -1);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(268, 47);
+            this.button2.Size = new System.Drawing.Size(268, 51);
             this.button2.TabIndex = 2;
             this.button2.Text = "                         Users";
             this.button2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -151,7 +152,7 @@
             this.button5.Font = new System.Drawing.Font("Bebas Neue", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button5.Image = ((System.Drawing.Image)(resources.GetObject("button5.Image")));
             this.button5.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button5.Location = new System.Drawing.Point(0, 304);
+            this.button5.Location = new System.Drawing.Point(0, 302);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(268, 47);
             this.button5.TabIndex = 2;
@@ -162,7 +163,7 @@
             // panel6
             // 
             this.panel6.Controls.Add(this.button6);
-            this.panel6.Location = new System.Drawing.Point(3, 395);
+            this.panel6.Location = new System.Drawing.Point(3, 289);
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(268, 47);
             this.panel6.TabIndex = 5;
@@ -195,17 +196,19 @@
             // 
             // button8
             // 
+            this.button8.BackColor = System.Drawing.Color.SeaGreen;
             this.button8.FlatAppearance.BorderSize = 0;
             this.button8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button8.Font = new System.Drawing.Font("Bebas Neue", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button8.Image = ((System.Drawing.Image)(resources.GetObject("button8.Image")));
+            this.button8.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button8.Location = new System.Drawing.Point(-3, 52);
             this.button8.Name = "button8";
             this.button8.Size = new System.Drawing.Size(268, 47);
             this.button8.TabIndex = 5;
             this.button8.Text = "                         Add user";
-            this.button8.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button8.UseVisualStyleBackColor = true;
+            this.button8.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button8.UseVisualStyleBackColor = false;
             // 
             // panel8
             // 
@@ -241,16 +244,17 @@
             this.Sidebar.Controls.Add(this.panel1);
             this.Sidebar.Controls.Add(this.panel8);
             this.Sidebar.Controls.Add(this.UsersPanel);
-            this.Sidebar.Controls.Add(this.panel2);
-            this.Sidebar.Controls.Add(this.panel4);
             this.Sidebar.Controls.Add(this.panel6);
-            this.Sidebar.Controls.Add(this.panel3);
+            this.Sidebar.Controls.Add(this.panel4);
+            this.Sidebar.Controls.Add(this.panel2);
+            this.Sidebar.Controls.Add(this.Logout_panel);
             this.Sidebar.Location = new System.Drawing.Point(-2, 0);
-            this.Sidebar.MaximumSize = new System.Drawing.Size(284, 800);
+            this.Sidebar.MaximumSize = new System.Drawing.Size(271, 800);
             this.Sidebar.MinimumSize = new System.Drawing.Size(61, 800);
             this.Sidebar.Name = "Sidebar";
-            this.Sidebar.Size = new System.Drawing.Size(284, 800);
+            this.Sidebar.Size = new System.Drawing.Size(271, 800);
             this.Sidebar.TabIndex = 6;
+            this.Sidebar.Paint += new System.Windows.Forms.PaintEventHandler(this.Sidebar_Paint);
             // 
             // panel1
             // 
@@ -258,16 +262,16 @@
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Location = new System.Drawing.Point(3, 3);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(336, 171);
+            this.panel1.Size = new System.Drawing.Size(281, 171);
             this.panel1.TabIndex = 8;
             // 
             // pictureBox3
             // 
             this.pictureBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.pictureBox3.Image = global::Med_Match.Properties.Resources.bars_sort;
-            this.pictureBox3.Location = new System.Drawing.Point(3, 51);
+            this.pictureBox3.Location = new System.Drawing.Point(3, 52);
             this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(46, 53);
+            this.pictureBox3.Size = new System.Drawing.Size(43, 36);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox3.TabIndex = 7;
             this.pictureBox3.TabStop = false;
@@ -276,23 +280,37 @@
             // panel2
             // 
             this.panel2.Controls.Add(this.button3);
-            this.panel2.Location = new System.Drawing.Point(3, 289);
+            this.panel2.Location = new System.Drawing.Point(3, 395);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(268, 47);
             this.panel2.TabIndex = 7;
             // 
-            // panel3
+            // Logout_panel
             // 
-            this.panel3.Controls.Add(this.button5);
-            this.panel3.Location = new System.Drawing.Point(3, 448);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(268, 352);
-            this.panel3.TabIndex = 7;
+            this.Logout_panel.AllowDrop = true;
+            this.Logout_panel.Controls.Add(this.button5);
+            this.Logout_panel.Location = new System.Drawing.Point(3, 448);
+            this.Logout_panel.Name = "Logout_panel";
+            this.Logout_panel.Size = new System.Drawing.Size(268, 352);
+            this.Logout_panel.TabIndex = 7;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Bebas Neue", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.SystemColors.ControlDark;
+            this.label1.Location = new System.Drawing.Point(74, 3);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(155, 48);
+            this.label1.TabIndex = 7;
+            this.label1.Text = "Dashboard";
             // 
             // DashBoard
             // 
+            this.AllowDrop = true;
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.ClientSize = new System.Drawing.Size(1400, 800);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.Sidebar);
             this.Controls.Add(this.pictureBox2);
             this.Font = new System.Drawing.Font("Bebas Neue", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -310,8 +328,9 @@
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.panel2.ResumeLayout(false);
-            this.panel3.ResumeLayout(false);
+            this.Logout_panel.ResumeLayout(false);
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -335,7 +354,8 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Panel Logout_panel;
+        private System.Windows.Forms.Label label1;
     }
 }
 

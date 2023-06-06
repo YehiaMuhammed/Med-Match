@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DnsClient;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -54,8 +55,7 @@ namespace Med_Match
 
         private void button2_Click(object sender, EventArgs e)
         {
-             UsersTimer.Start();
-
+            UsersTimer.Start();
         }
 
         private void UsersTimer_Tick(object sender, EventArgs e)
@@ -88,5 +88,13 @@ namespace Med_Match
             SidebarTimer.Start();
 
         }
+
+        private void Sidebar_Paint(object sender, PaintEventArgs e)
+        {
+            Sidebar.BringToFront();
+
+        }
+
+  
     }
 }

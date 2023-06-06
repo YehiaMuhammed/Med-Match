@@ -191,9 +191,24 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="mongocrypt.dll" />
+    <None Include="Resources\users-alt.png" />
+    <None Include="Resources\user.png" />
+    <None Include="Resources\sign-out-alt.png" />
+    <None Include="Resources\product.png" />
+    <None Include="Resources\package.png" />
     <None Include="Resources\bars-sort.png" />
+    <None Include="Resources\add-user.png" />
+    <None Include="Resources\box.png" />
+    <None Include="Resources\checkout.png" />
+    <None Include="Resources\circle-user.png" />
     <Content Include="Resources\ExitLogo.png" />
     <None Include="Resources\home.png" />
+    <None Include="Resources\full-stop %281%29.png" />
+    <None Include="Resources\full-stop.png" />
+    <None Include="Resources\gift.png" />
+    <None Include="Resources\home %282%29.png" />
+    <None Include="Resources\info.png" />
+    <None Include="Resources\information.png" />
     <Content Include="Resources\MedMatchLogo.png" />
     <Content Include="Resources\MedMatchLogo2.png" />
   </ItemGroup>
