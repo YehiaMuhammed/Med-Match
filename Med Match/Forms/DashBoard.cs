@@ -13,6 +13,8 @@ namespace Med_Match
     public partial class DashBoard : Form
     {
         bool SidebarExpand;
+        bool UsersExpand;
+
         public DashBoard()
         {
             InitializeComponent();
@@ -37,6 +39,8 @@ namespace Med_Match
             }
             else
             {
+                // if side bar is maxmize
+
                 Sidebar.Width += 10;
                 if (Sidebar.Width == Sidebar.MaximumSize.Width)
                 {
@@ -46,9 +50,43 @@ namespace Med_Match
             }
         }
 
-        private void pictureBox3_Click(object sender, EventArgs e)
+     
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+             UsersTimer.Start();
+
+        }
+
+        private void UsersTimer_Tick(object sender, EventArgs e)
+        {
+            if (UsersExpand)
+            {
+                // if side users button is minimize
+                UsersPanel.Height -= 10;
+                if (UsersPanel.Height == UsersPanel.MinimumSize.Height)
+                {
+                    UsersExpand = false;
+                    UsersTimer.Stop();
+                }
+            }
+            else
+            {
+                // if side users button is maxmize
+
+                UsersPanel.Height += 10;
+                if (UsersPanel.Height == UsersPanel.MaximumSize.Height)
+                {
+                    UsersExpand = true;
+                    UsersTimer.Stop();
+                }
+            }
+        }
+
+        private void pictureBox3_Click_1(object sender, EventArgs e)
         {
             SidebarTimer.Start();
+
         }
     }
 }
