@@ -28,12 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UsersControl));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UsersControl));
             this.panel1 = new System.Windows.Forms.Panel();
-            this.deleteUser_btn = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
@@ -46,7 +45,6 @@
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.deleteUser_btn);
             this.panel1.Controls.Add(this.panel2);
             this.panel1.Controls.Add(this.panel3);
             this.panel1.Controls.Add(this.dataGridView1);
@@ -59,17 +57,6 @@
             this.panel1.Size = new System.Drawing.Size(1387, 589);
             this.panel1.TabIndex = 0;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
-            // 
-            // deleteUser_btn
-            // 
-            this.deleteUser_btn.FlatAppearance.BorderSize = 0;
-            this.deleteUser_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.deleteUser_btn.Image = ((System.Drawing.Image)(resources.GetObject("deleteUser_btn.Image")));
-            this.deleteUser_btn.Location = new System.Drawing.Point(1157, 475);
-            this.deleteUser_btn.Name = "deleteUser_btn";
-            this.deleteUser_btn.Size = new System.Drawing.Size(42, 39);
-            this.deleteUser_btn.TabIndex = 7;
-            this.deleteUser_btn.UseVisualStyleBackColor = true;
             // 
             // panel2
             // 
@@ -186,6 +173,5 @@
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Button deleteUser_btn;
     }
 }
