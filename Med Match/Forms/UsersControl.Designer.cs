@@ -28,11 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UsersControl));
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.deleteUser_btn = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
@@ -41,10 +42,9 @@
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.search_btn = new System.Windows.Forms.Button();
             this.email_txt = new System.Windows.Forms.TextBox();
             this.Username_txt = new System.Windows.Forms.TextBox();
-            this.deleteUser_btn = new System.Windows.Forms.Button();
-            this.search_btn = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
@@ -64,6 +64,17 @@
             this.panel1.Size = new System.Drawing.Size(1387, 589);
             this.panel1.TabIndex = 0;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            // 
+            // deleteUser_btn
+            // 
+            this.deleteUser_btn.FlatAppearance.BorderSize = 0;
+            this.deleteUser_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.deleteUser_btn.Image = ((System.Drawing.Image)(resources.GetObject("deleteUser_btn.Image")));
+            this.deleteUser_btn.Location = new System.Drawing.Point(1157, 475);
+            this.deleteUser_btn.Name = "deleteUser_btn";
+            this.deleteUser_btn.Size = new System.Drawing.Size(42, 39);
+            this.deleteUser_btn.TabIndex = 7;
+            this.deleteUser_btn.UseVisualStyleBackColor = true;
             // 
             // panel2
             // 
@@ -85,21 +96,21 @@
             // 
             this.dataGridView1.AllowUserToResizeColumns = false;
             this.dataGridView1.AllowUserToResizeRows = false;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.White;
-            this.dataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
+            this.dataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView1.BackgroundColor = System.Drawing.Color.White;
             this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataGridView1.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.dataGridView1.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Bebas Neue", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Bebas Neue", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column1,
@@ -107,14 +118,14 @@
             this.Column3,
             this.Column4,
             this.Column5});
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Bebas Neue", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Bebas Neue", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle3;
             this.dataGridView1.EnableHeadersVisualStyles = false;
             this.dataGridView1.Location = new System.Drawing.Point(27, 112);
             this.dataGridView1.Name = "dataGridView1";
@@ -148,6 +159,17 @@
             this.Column5.HeaderText = "orders";
             this.Column5.Name = "Column5";
             // 
+            // search_btn
+            // 
+            this.search_btn.FlatAppearance.BorderSize = 0;
+            this.search_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.search_btn.Image = ((System.Drawing.Image)(resources.GetObject("search_btn.Image")));
+            this.search_btn.Location = new System.Drawing.Point(1054, 27);
+            this.search_btn.Name = "search_btn";
+            this.search_btn.Size = new System.Drawing.Size(68, 46);
+            this.search_btn.TabIndex = 2;
+            this.search_btn.UseVisualStyleBackColor = true;
+            // 
             // email_txt
             // 
             this.email_txt.BorderStyle = System.Windows.Forms.BorderStyle.None;
@@ -173,28 +195,6 @@
             this.Username_txt.Text = "Enter username...";
             this.Username_txt.Enter += new System.EventHandler(this.Username_txt_Enter);
             this.Username_txt.Leave += new System.EventHandler(this.Username_txt_Leave);
-            // 
-            // deleteUser_btn
-            // 
-            this.deleteUser_btn.FlatAppearance.BorderSize = 0;
-            this.deleteUser_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.deleteUser_btn.Image = ((System.Drawing.Image)(resources.GetObject("deleteUser_btn.Image")));
-            this.deleteUser_btn.Location = new System.Drawing.Point(1157, 475);
-            this.deleteUser_btn.Name = "deleteUser_btn";
-            this.deleteUser_btn.Size = new System.Drawing.Size(42, 39);
-            this.deleteUser_btn.TabIndex = 7;
-            this.deleteUser_btn.UseVisualStyleBackColor = true;
-            // 
-            // search_btn
-            // 
-            this.search_btn.FlatAppearance.BorderSize = 0;
-            this.search_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.search_btn.Image = ((System.Drawing.Image)(resources.GetObject("search_btn.Image")));
-            this.search_btn.Location = new System.Drawing.Point(1054, 27);
-            this.search_btn.Name = "search_btn";
-            this.search_btn.Size = new System.Drawing.Size(68, 46);
-            this.search_btn.TabIndex = 2;
-            this.search_btn.UseVisualStyleBackColor = true;
             // 
             // UsersControl
             // 
