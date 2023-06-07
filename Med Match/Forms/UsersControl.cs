@@ -99,10 +99,24 @@ namespace Med_Match.Forms
                     dataTable.Rows.Add(row);
                 }
                 dataGridView1.DataSource = dataTable;
+                DataGridViewImageColumn deleteButton = new DataGridViewImageColumn();
+                Image image = Properties.Resources.remove__1_;
+                deleteButton.Image = image; 
+                deleteButton.Name = "Delete";
+                deleteButton.ImageLayout = DataGridViewImageCellLayout.Zoom;
+                int columnIndex = 4;
+                if(dataGridView1.Columns["Delete"] == null)
+                {
+                    dataGridView1.Columns.Insert(columnIndex, deleteButton);
+
+                }
                 dataGridView1.Columns["userName"].HeaderText = "User Name";
-                dataGridView1.Columns["userName"].DisplayIndex = 0;
-                dataGridView1.Columns["role"].HeaderText = "Role";
+
+
                 dataGridView1.Columns["_id"].Visible = false;
+
+
+
             }
             catch (Exception ex)
             {
@@ -180,5 +194,6 @@ namespace Med_Match.Forms
             }
             return base.ProcessCmdKey(ref msg, keyData);
         }
+        
     }
 }
