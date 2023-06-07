@@ -33,8 +33,22 @@ namespace Med_Match.Forms
 
         }
 
-      
+        private void Username_txt_Leave(object sender, EventArgs e)
+        {
+            if (Username_txt.Text == string.Empty)
+            {
+                Username_txt.Text = "Enter username";
+            }
 
-     
+
+        }
+
+        private void email_txt_Leave(object sender, EventArgs e)
+        {
+            if (email_txt.Text == string.Empty)
+            {
+                email_txt.Text = "Enter Email";
+            }
+        }
     }
 }
