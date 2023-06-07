@@ -210,6 +210,7 @@ namespace Med_Match.Forms
             if(e.ColumnIndex == dataGridView1.Columns["Delete"].Index)
             {
                 var documentId = dataGridView1.Rows[e.RowIndex].Cells["_Id"].Value.ToString();
+                MessageBox.Show(documentId);
             }
             
         }
