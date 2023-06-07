@@ -68,10 +68,13 @@ namespace Med_Match
             if (lastClickedButton != null)
             {
                 lastClickedButton.BackColor = Color.LightGreen;
+                lastClickedButton.ForeColor = Color.Black;
+
             }
             clickedbutton.BackColor = Color.DarkGreen;
+            clickedbutton.ForeColor = Color.White;
+
             lastClickedButton = clickedbutton;
-            label1.Text = "Users";
         }
 
         
@@ -117,8 +120,12 @@ namespace Med_Match
             if (lastClickedButton != null)
             {
                 lastClickedButton.BackColor = Color.LightGreen;
+                lastClickedButton.ForeColor = Color.Black;
+
             }
             clickedbutton.BackColor = Color.DarkGreen;
+            clickedbutton.ForeColor = Color.White;
+
             lastClickedButton = clickedbutton;
 
 
@@ -163,8 +170,12 @@ namespace Med_Match
             if (lastClickedButton != null)
             {
                 lastClickedButton.BackColor = Color.LightGreen;
+                lastClickedButton.ForeColor = Color.Black;
+
             }
             clickedbutton.BackColor = Color.DarkGreen;
+            clickedbutton.ForeColor = Color.White;
+
             lastClickedButton = clickedbutton;
         }
     }
