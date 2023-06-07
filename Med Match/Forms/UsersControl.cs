@@ -39,8 +39,6 @@ namespace Med_Match.Forms
             {
                 Username_txt.Text = "Enter username";
             }
-
-
         }
 
         private void email_txt_Leave(object sender, EventArgs e)

@@ -32,15 +32,15 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DashBoard));
             this.SidebarTimer = new System.Windows.Forms.Timer(this.components);
             this.panel10 = new System.Windows.Forms.Panel();
+            this.orders_btn = new System.Windows.Forms.Button();
             this.Drugspanel = new System.Windows.Forms.Panel();
-            this.button8 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
+            this.showDrug_btn = new System.Windows.Forms.Button();
+            this.addDrug_btn = new System.Windows.Forms.Button();
+            this.drugs_btn = new System.Windows.Forms.Button();
             this.UsersPanel = new System.Windows.Forms.Panel();
-            this.button2 = new System.Windows.Forms.Button();
+            this.users_btn = new System.Windows.Forms.Button();
             this.panel8 = new System.Windows.Forms.Panel();
-            this.button7 = new System.Windows.Forms.Button();
+            this.Home_btn = new System.Windows.Forms.Button();
             this.DrugsTimer = new System.Windows.Forms.Timer(this.components);
             this.Sidebar = new System.Windows.Forms.FlowLayoutPanel();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -48,10 +48,10 @@
             this.label8 = new System.Windows.Forms.Label();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.button3 = new System.Windows.Forms.Button();
+            this.about_btn = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.Logout_panel = new System.Windows.Forms.Panel();
-            this.button5 = new System.Windows.Forms.Button();
+            this.logout_btn = new System.Windows.Forms.Button();
             this.panel9 = new System.Windows.Forms.Panel();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -78,17 +78,32 @@
             // 
             // panel10
             // 
-            this.panel10.Controls.Add(this.button4);
+            this.panel10.Controls.Add(this.orders_btn);
             this.panel10.Location = new System.Drawing.Point(3, 370);
             this.panel10.Name = "panel10";
             this.panel10.Size = new System.Drawing.Size(268, 47);
             this.panel10.TabIndex = 4;
             // 
+            // orders_btn
+            // 
+            this.orders_btn.FlatAppearance.BorderSize = 0;
+            this.orders_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.orders_btn.Font = new System.Drawing.Font("Bebas Neue", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.orders_btn.Image = ((System.Drawing.Image)(resources.GetObject("orders_btn.Image")));
+            this.orders_btn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.orders_btn.Location = new System.Drawing.Point(0, 0);
+            this.orders_btn.Name = "orders_btn";
+            this.orders_btn.Size = new System.Drawing.Size(268, 47);
+            this.orders_btn.TabIndex = 2;
+            this.orders_btn.Text = "                         Orders";
+            this.orders_btn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.orders_btn.UseVisualStyleBackColor = true;
+            // 
             // Drugspanel
             // 
-            this.Drugspanel.Controls.Add(this.button8);
-            this.Drugspanel.Controls.Add(this.button1);
-            this.Drugspanel.Controls.Add(this.button6);
+            this.Drugspanel.Controls.Add(this.showDrug_btn);
+            this.Drugspanel.Controls.Add(this.addDrug_btn);
+            this.Drugspanel.Controls.Add(this.drugs_btn);
             this.Drugspanel.Location = new System.Drawing.Point(3, 312);
             this.Drugspanel.MaximumSize = new System.Drawing.Size(268, 150);
             this.Drugspanel.MinimumSize = new System.Drawing.Size(268, 52);
@@ -96,70 +111,55 @@
             this.Drugspanel.Size = new System.Drawing.Size(268, 52);
             this.Drugspanel.TabIndex = 5;
             // 
-            // button8
+            // showDrug_btn
             // 
-            this.button8.FlatAppearance.BorderSize = 0;
-            this.button8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button8.Font = new System.Drawing.Font("Bebas Neue", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button8.Image = ((System.Drawing.Image)(resources.GetObject("button8.Image")));
-            this.button8.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button8.Location = new System.Drawing.Point(0, 50);
-            this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(268, 47);
-            this.button8.TabIndex = 15;
-            this.button8.Text = "                         Show drugs";
-            this.button8.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button8.UseVisualStyleBackColor = true;
+            this.showDrug_btn.FlatAppearance.BorderSize = 0;
+            this.showDrug_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.showDrug_btn.Font = new System.Drawing.Font("Bebas Neue", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.showDrug_btn.Image = ((System.Drawing.Image)(resources.GetObject("showDrug_btn.Image")));
+            this.showDrug_btn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.showDrug_btn.Location = new System.Drawing.Point(0, 50);
+            this.showDrug_btn.Name = "showDrug_btn";
+            this.showDrug_btn.Size = new System.Drawing.Size(268, 47);
+            this.showDrug_btn.TabIndex = 15;
+            this.showDrug_btn.Text = "                         Show drugs";
+            this.showDrug_btn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.showDrug_btn.UseVisualStyleBackColor = true;
             // 
-            // button1
+            // addDrug_btn
             // 
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Bebas Neue", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
-            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.Location = new System.Drawing.Point(0, 103);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(268, 47);
-            this.button1.TabIndex = 15;
-            this.button1.Text = "                         Add drug";
-            this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.UseVisualStyleBackColor = true;
+            this.addDrug_btn.FlatAppearance.BorderSize = 0;
+            this.addDrug_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.addDrug_btn.Font = new System.Drawing.Font("Bebas Neue", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.addDrug_btn.Image = ((System.Drawing.Image)(resources.GetObject("addDrug_btn.Image")));
+            this.addDrug_btn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.addDrug_btn.Location = new System.Drawing.Point(0, 103);
+            this.addDrug_btn.Name = "addDrug_btn";
+            this.addDrug_btn.Size = new System.Drawing.Size(268, 47);
+            this.addDrug_btn.TabIndex = 15;
+            this.addDrug_btn.Text = "                         Add drug";
+            this.addDrug_btn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.addDrug_btn.UseVisualStyleBackColor = true;
             // 
-            // button6
+            // drugs_btn
             // 
-            this.button6.FlatAppearance.BorderSize = 0;
-            this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button6.Font = new System.Drawing.Font("Bebas Neue", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button6.Image = ((System.Drawing.Image)(resources.GetObject("button6.Image")));
-            this.button6.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button6.Location = new System.Drawing.Point(0, 0);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(268, 52);
-            this.button6.TabIndex = 2;
-            this.button6.Text = "                         Drugs";
-            this.button6.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button6.UseVisualStyleBackColor = true;
-            this.button6.Click += new System.EventHandler(this.button6_Click);
-            // 
-            // button4
-            // 
-            this.button4.FlatAppearance.BorderSize = 0;
-            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.Font = new System.Drawing.Font("Bebas Neue", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.Image = ((System.Drawing.Image)(resources.GetObject("button4.Image")));
-            this.button4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button4.Location = new System.Drawing.Point(0, 0);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(268, 47);
-            this.button4.TabIndex = 2;
-            this.button4.Text = "                         Orders";
-            this.button4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button4.UseVisualStyleBackColor = true;
+            this.drugs_btn.FlatAppearance.BorderSize = 0;
+            this.drugs_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.drugs_btn.Font = new System.Drawing.Font("Bebas Neue", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.drugs_btn.Image = ((System.Drawing.Image)(resources.GetObject("drugs_btn.Image")));
+            this.drugs_btn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.drugs_btn.Location = new System.Drawing.Point(0, 0);
+            this.drugs_btn.Name = "drugs_btn";
+            this.drugs_btn.Size = new System.Drawing.Size(268, 52);
+            this.drugs_btn.TabIndex = 2;
+            this.drugs_btn.Text = "                         Drugs";
+            this.drugs_btn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.drugs_btn.UseVisualStyleBackColor = true;
+            this.drugs_btn.Click += new System.EventHandler(this.drugs_btn_Click);
             // 
             // UsersPanel
             // 
-            this.UsersPanel.Controls.Add(this.button2);
+            this.UsersPanel.Controls.Add(this.users_btn);
             this.UsersPanel.Location = new System.Drawing.Point(3, 256);
             this.UsersPanel.MaximumSize = new System.Drawing.Size(268, 102);
             this.UsersPanel.MinimumSize = new System.Drawing.Size(268, 50);
@@ -167,45 +167,45 @@
             this.UsersPanel.Size = new System.Drawing.Size(268, 50);
             this.UsersPanel.TabIndex = 4;
             // 
-            // button2
+            // users_btn
             // 
-            this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Bebas Neue", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Image = ((System.Drawing.Image)(resources.GetObject("button2.Image")));
-            this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button2.Location = new System.Drawing.Point(0, -1);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(268, 54);
-            this.button2.TabIndex = 2;
-            this.button2.Text = "                         Users";
-            this.button2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.users_btn.FlatAppearance.BorderSize = 0;
+            this.users_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.users_btn.Font = new System.Drawing.Font("Bebas Neue", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.users_btn.Image = ((System.Drawing.Image)(resources.GetObject("users_btn.Image")));
+            this.users_btn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.users_btn.Location = new System.Drawing.Point(0, -1);
+            this.users_btn.Name = "users_btn";
+            this.users_btn.Size = new System.Drawing.Size(268, 54);
+            this.users_btn.TabIndex = 2;
+            this.users_btn.Text = "                         Users";
+            this.users_btn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.users_btn.UseVisualStyleBackColor = true;
+            this.users_btn.Click += new System.EventHandler(this.users_btn_Click);
             // 
             // panel8
             // 
-            this.panel8.Controls.Add(this.button7);
+            this.panel8.Controls.Add(this.Home_btn);
             this.panel8.Location = new System.Drawing.Point(3, 205);
             this.panel8.Name = "panel8";
             this.panel8.Size = new System.Drawing.Size(268, 45);
             this.panel8.TabIndex = 5;
             // 
-            // button7
+            // Home_btn
             // 
-            this.button7.FlatAppearance.BorderSize = 0;
-            this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button7.Font = new System.Drawing.Font("Bebas Neue", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button7.Image = ((System.Drawing.Image)(resources.GetObject("button7.Image")));
-            this.button7.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button7.Location = new System.Drawing.Point(0, 0);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(268, 47);
-            this.button7.TabIndex = 2;
-            this.button7.Text = "                         Home";
-            this.button7.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button7.UseVisualStyleBackColor = true;
-            this.button7.Click += new System.EventHandler(this.button7_Click_1);
+            this.Home_btn.FlatAppearance.BorderSize = 0;
+            this.Home_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Home_btn.Font = new System.Drawing.Font("Bebas Neue", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Home_btn.Image = ((System.Drawing.Image)(resources.GetObject("Home_btn.Image")));
+            this.Home_btn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.Home_btn.Location = new System.Drawing.Point(0, 0);
+            this.Home_btn.Name = "Home_btn";
+            this.Home_btn.Size = new System.Drawing.Size(268, 47);
+            this.Home_btn.TabIndex = 2;
+            this.Home_btn.Text = "                         Home";
+            this.Home_btn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.Home_btn.UseVisualStyleBackColor = true;
+            this.Home_btn.Click += new System.EventHandler(this.Home_btn_Click_1);
             // 
             // DrugsTimer
             // 
@@ -273,26 +273,26 @@
             // 
             // panel2
             // 
-            this.panel2.Controls.Add(this.button3);
+            this.panel2.Controls.Add(this.about_btn);
             this.panel2.Location = new System.Drawing.Point(3, 423);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(268, 47);
             this.panel2.TabIndex = 7;
             // 
-            // button3
+            // about_btn
             // 
-            this.button3.FlatAppearance.BorderSize = 0;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Font = new System.Drawing.Font("Bebas Neue", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.Image = ((System.Drawing.Image)(resources.GetObject("button3.Image")));
-            this.button3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button3.Location = new System.Drawing.Point(0, 0);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(268, 47);
-            this.button3.TabIndex = 2;
-            this.button3.Text = "                         About Us";
-            this.button3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button3.UseVisualStyleBackColor = true;
+            this.about_btn.FlatAppearance.BorderSize = 0;
+            this.about_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.about_btn.Font = new System.Drawing.Font("Bebas Neue", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.about_btn.Image = ((System.Drawing.Image)(resources.GetObject("about_btn.Image")));
+            this.about_btn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.about_btn.Location = new System.Drawing.Point(0, 0);
+            this.about_btn.Name = "about_btn";
+            this.about_btn.Size = new System.Drawing.Size(268, 47);
+            this.about_btn.TabIndex = 2;
+            this.about_btn.Text = "                         About Us";
+            this.about_btn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.about_btn.UseVisualStyleBackColor = true;
             // 
             // label1
             // 
@@ -308,7 +308,7 @@
             // Logout_panel
             // 
             this.Logout_panel.BackColor = System.Drawing.Color.LightGreen;
-            this.Logout_panel.Controls.Add(this.button5);
+            this.Logout_panel.Controls.Add(this.logout_btn);
             this.Logout_panel.Location = new System.Drawing.Point(-2, 723);
             this.Logout_panel.MaximumSize = new System.Drawing.Size(271, 77);
             this.Logout_panel.MinimumSize = new System.Drawing.Size(61, 77);
@@ -317,20 +317,20 @@
             this.Logout_panel.TabIndex = 8;
             this.Logout_panel.Paint += new System.Windows.Forms.PaintEventHandler(this.Logout_panel_Paint);
             // 
-            // button5
+            // logout_btn
             // 
-            this.button5.FlatAppearance.BorderSize = 0;
-            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button5.Font = new System.Drawing.Font("Bebas Neue", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button5.Image = ((System.Drawing.Image)(resources.GetObject("button5.Image")));
-            this.button5.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button5.Location = new System.Drawing.Point(6, 30);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(268, 47);
-            this.button5.TabIndex = 2;
-            this.button5.Text = "                         Logout";
-            this.button5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button5.UseVisualStyleBackColor = true;
+            this.logout_btn.FlatAppearance.BorderSize = 0;
+            this.logout_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.logout_btn.Font = new System.Drawing.Font("Bebas Neue", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.logout_btn.Image = ((System.Drawing.Image)(resources.GetObject("logout_btn.Image")));
+            this.logout_btn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.logout_btn.Location = new System.Drawing.Point(6, 30);
+            this.logout_btn.Name = "logout_btn";
+            this.logout_btn.Size = new System.Drawing.Size(268, 47);
+            this.logout_btn.TabIndex = 2;
+            this.logout_btn.Text = "                         Logout";
+            this.logout_btn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.logout_btn.UseVisualStyleBackColor = true;
             // 
             // panel9
             // 
@@ -410,15 +410,15 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Timer SidebarTimer;
-        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Button logout_btn;
         private System.Windows.Forms.Panel panel10;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button orders_btn;
+        private System.Windows.Forms.Button about_btn;
+        private System.Windows.Forms.Button users_btn;
         private System.Windows.Forms.Panel Drugspanel;
-        private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.Button drugs_btn;
         private System.Windows.Forms.Panel panel8;
-        private System.Windows.Forms.Button button7;
+        private System.Windows.Forms.Button Home_btn;
         private System.Windows.Forms.Panel UsersPanel;
         private System.Windows.Forms.Timer DrugsTimer;
         private System.Windows.Forms.FlowLayoutPanel Sidebar;
@@ -431,8 +431,8 @@
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Panel panel9;
         private System.Windows.Forms.Panel panelContainer;
-        private System.Windows.Forms.Button button8;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button showDrug_btn;
+        private System.Windows.Forms.Button addDrug_btn;
     }
 }
 

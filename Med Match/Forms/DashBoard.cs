@@ -60,7 +60,7 @@ namespace Med_Match
 
      
 
-        private void button2_Click(object sender, EventArgs e) //Users button
+        private void users_btn_Click(object sender, EventArgs e) //Users button
         {
             UsersControl uc = new UsersControl();
             addUsercontrol(uc);
@@ -82,13 +82,15 @@ namespace Med_Match
 
         }
 
+        // make sidebar override all things
         private void Sidebar_Paint(object sender, PaintEventArgs e) 
         {
-            Sidebar.BringToFront(); // make sidebar override all things 
+            Sidebar.BringToFront();  
 
         }
 
-        private void addUsercontrol (UserControl userControl) // Func to handle user control
+        // Func to handle user control
+        private void addUsercontrol (UserControl userControl) 
         {
             userControl.Dock = DockStyle.Fill;
             panelContainer.Controls.Clear();
@@ -96,17 +98,17 @@ namespace Med_Match
 
         }
 
-        
 
+        //make black panel override
         private void Logout_panel_Paint(object sender, PaintEventArgs e)
         {
-            Logout_panel.BringToFront(); // make black panel override
+            Logout_panel.BringToFront(); 
 
         }
 
-   
 
-        private void button7_Click_1(object sender, EventArgs e) // home button
+        
+        private void Home_btn_Click_1(object sender, EventArgs e)
         {
             DashboardControl uc = new DashboardControl();
             addUsercontrol(uc);
@@ -154,7 +156,7 @@ namespace Med_Match
             }
         }
 
-        private void button6_Click(object sender, EventArgs e)
+        private void drugs_btn_Click(object sender, EventArgs e)
         {
             DrugsTimer.Start();
             Button clickedbutton = (Button)sender;
