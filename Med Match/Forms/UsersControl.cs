@@ -7,14 +7,23 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using MongoDB.Driver;
+using MongoDB.Bson;
+using MongoDB.Bson.Serialization.Attributes;
 
 namespace Med_Match.Forms
 {
     public partial class UsersControl : UserControl
     {
+        IMongoCollection<BsonDocument> collection;
         public UsersControl()
         {
             InitializeComponent();
+            var connectionString = "mongodb+srv://admin:cdoGLvJ6bxxneHQn@cluster0.a0hbnon.mongodb.net";
+            var client = new MongoClient(connectionString);
+            var database = client.GetDatabase("Project");
+            collection = database.GetCollection<BsonDocument>("users");
+            populateGrid();
         }
 
         private void panel1_Paint(object sender, PaintEventArgs e)
@@ -59,6 +68,117 @@ namespace Med_Match.Forms
                 email_txt.ForeColor = Color.Gray;
                 email_txt.Text = "Enter email...";
             }
+        }
+
+        
+        public void populateGrid()
+        {
+            try
+            {
+                var filter = Builders<BsonDocument>.Filter.Empty;
+                var projection = Builders<BsonDocument>.Projection.Include("userName").Include("email").Include("role");
+                var documents = collection.Find(filter).Project(projection).ToList();
+                var dataTable = new DataTable();
+
+                foreach (var document in documents)
+                {
+                    if (dataTable.Columns.Count == 0)
+                    {
+                        foreach (var element in document.Elements)
+                        {
+                            dataTable.Columns.Add(element.Name);
+                        }
+                    }
+
+                    var row = dataTable.NewRow();
+                    foreach (var element in document.Elements)
+                    {
+                        row[element.Name] = element.Value;
+                    }
+
+                    dataTable.Rows.Add(row);
+                }
+                dataGridView1.DataSource = dataTable;
+                dataGridView1.Columns["userName"].HeaderText = "User Name";
+                dataGridView1.Columns["userName"].DisplayIndex = 0;
+                dataGridView1.Columns["role"].HeaderText = "Role";
+                dataGridView1.Columns["_id"].Visible = false;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+           
+        }
+
+        private void search_btn_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (Username_txt.Text == "Enter username...")
+                {
+                    Username_txt.Text = "";
+                    Username_txt.ForeColor = Color.Black;
+                }
+                if (email_txt.Text == "Enter email...")
+                {
+                    email_txt.Text = "";
+                    email_txt.ForeColor = Color.Black;
+                }
+                var username = Username_txt.Text;
+                var email = email_txt.Text;
+                var userNameFilter = Builders<BsonDocument>.Filter.Regex("userName", new BsonRegularExpression($"^{username}", "i"));
+                var emailFilter = Builders<BsonDocument>.Filter.Regex("email", new BsonRegularExpression($"^{email}", "i"));
+                var filter = Builders<BsonDocument>.Filter.And(userNameFilter, emailFilter);
+                var projection = Builders<BsonDocument>.Projection.Include("userName").Include("email").Include("role");
+                var documents = collection.Find(filter).Project(projection).ToList();
+                var dataTable = new DataTable();
+                if(documents.Count > 0)
+                {
+                    foreach (var document in documents)
+                    {
+                        if (dataTable.Columns.Count == 0)
+                        {
+                            foreach (var element in document.Elements)
+                            {
+                                dataTable.Columns.Add(element.Name);
+                            }
+                        }
+
+                        var row = dataTable.NewRow();
+                        foreach (var element in document.Elements)
+                        {
+                            row[element.Name] = element.Value;
+                        }
+
+                        dataTable.Rows.Add(row);
+                    }
+                    dataGridView1.DataSource = dataTable;
+                    dataGridView1.Columns["userName"].HeaderText = "User Name";
+                    dataGridView1.Columns["userName"].DisplayIndex = 0;
+                    dataGridView1.Columns["role"].HeaderText = "Role";
+                    dataGridView1.Columns["_id"].Visible = false;
+                }
+                else
+                {
+                    MessageBox.Show("No Matching Users Found!");
+                }
+               
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            
+        }
+        protected override bool ProcessCmdKey(ref Message msg, Keys keyData)
+        {
+            if (keyData == Keys.Enter)
+            {
+                search_btn.PerformClick();
+                return true;
+            }
+            return base.ProcessCmdKey(ref msg, keyData);
         }
     }
 }
