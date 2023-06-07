@@ -24,15 +24,23 @@ namespace Med_Match.Forms
 
         private void Username_txt_Enter(object sender, EventArgs e)
         {
-            Username_txt.Text = string.Empty;
-            Username_txt.ForeColor = Color.Black;
+            if (Username_txt.Text == "Enter username...")
+            {
+                Username_txt.Text = string.Empty;
+                Username_txt.ForeColor = Color.Black;
+            }
+
+            
 
         }
 
         private void email_txt_Enter(object sender, EventArgs e)
         {
-            email_txt.Text = string.Empty;
-            email_txt.ForeColor = Color.Black;
+            if (email_txt.Text == "Enter email...")
+            {
+                email_txt.Text = string.Empty;
+                email_txt.ForeColor = Color.Black;
+            }
         }
 
         private void Username_txt_Leave(object sender, EventArgs e)
@@ -40,7 +48,7 @@ namespace Med_Match.Forms
             if (Username_txt.Text == string.Empty)
             {
                 Username_txt.ForeColor = Color.Gray;
-                Username_txt.Text = "Enter username";
+                Username_txt.Text = "Enter username...";
             }
         }
 
@@ -49,7 +57,7 @@ namespace Med_Match.Forms
             if (email_txt.Text == string.Empty)
             {
                 email_txt.ForeColor = Color.Gray;
-                email_txt.Text = "Enter Email";
+                email_txt.Text = "Enter email...";
             }
         }
     }
