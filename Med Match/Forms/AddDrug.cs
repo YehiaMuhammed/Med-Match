@@ -7,14 +7,22 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using MongoDB.Driver;
+using MongoDB.Bson;
+using MongoDB.Bson.Serialization.Attributes;
 
 namespace Med_Match.Forms
 {
     public partial class AddDrug : UserControl
     {
+        IMongoCollection<BsonDocument> collection;
         public AddDrug()
         {
             InitializeComponent();
+            var connectionString = "mongodb+srv://admin:cdoGLvJ6bxxneHQn@cluster0.a0hbnon.mongodb.net";
+            var client = new MongoClient(connectionString);
+            var database = client.GetDatabase("Project");
+            collection = database.GetCollection<BsonDocument>("drugs");
         }
 
         private void Drugname_txt_Enter(object sender, EventArgs e)
@@ -87,6 +95,33 @@ namespace Med_Match.Forms
                 activelngredient_txt.ForeColor = Color.Gray;
                 activelngredient_txt.Text = "Enter activeIngredient ...";
             }
+        }
+
+        private void addDrug_btn_Click(object sender, EventArgs e)
+        {
+            if(Drugname_txt.Text == "Enter drug name..." || drugCat_txt.Text == "Enter Category..." || drugPrive_txt.Text == "Enter price..." || activelngredient_txt.Text == "Enter activeIngredient ...")
+            {
+                MessageBox.Show("Please Fill Missing Info");
+            }
+            else
+            {
+                string drugName = Drugname_txt.Text;
+                string drugCat = drugCat_txt.Text;
+                int drugPrice = int.Parse(drugPrive_txt.Text);
+                string drugActiveIngredient = activelngredient_txt.Text;
+
+                BsonDocument newDrug = new BsonDocument
+                {
+                    {"name", drugName },
+                    {"category", drugCat },
+                    {"price", drugPrice },
+                    {"activeIngredient", drugActiveIngredient },
+                };
+
+                string documentJson = newDrug.ToJson();
+                MessageBox.Show(documentJson, "New Document");
+            }
+
         }
     }
 }

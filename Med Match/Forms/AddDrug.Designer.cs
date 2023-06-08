@@ -134,6 +134,7 @@
             this.addDrug_btn.Size = new System.Drawing.Size(85, 51);
             this.addDrug_btn.TabIndex = 13;
             this.addDrug_btn.UseVisualStyleBackColor = true;
+            this.addDrug_btn.Click += new System.EventHandler(this.addDrug_btn_Click);
             // 
             // AddDrug
             // 
