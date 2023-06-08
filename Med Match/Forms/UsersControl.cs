@@ -163,6 +163,7 @@ namespace Med_Match.Forms
 
                         dataTable.Rows.Add(row);
                     }
+                    dataGridView1.DataSource = dataTable;
                     DataGridViewImageColumn deleteButton = new DataGridViewImageColumn();
                     Image image = Properties.Resources.remove__1_;
                     deleteButton.Image = image;
