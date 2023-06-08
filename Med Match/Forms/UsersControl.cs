@@ -38,9 +38,6 @@ namespace Med_Match.Forms
                 Username_txt.Text = string.Empty;
                 Username_txt.ForeColor = Color.Black;
             }
-
-            
-
         }
 
         private void email_txt_Enter(object sender, EventArgs e)
@@ -69,8 +66,7 @@ namespace Med_Match.Forms
                 email_txt.Text = "Enter email...";
             }
         }
-
-        
+     
         public void populateGrid()
         {
             try

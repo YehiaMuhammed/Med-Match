@@ -18,7 +18,7 @@ namespace Med_Match
     {
         bool SidebarExpand;
         bool DrugsExpand;
-        private Button lastClickedButton ;
+        private Button lastClickedButton;
 
         public DashBoard()
         {
@@ -29,7 +29,23 @@ namespace Med_Match
         {
             this.Close();
         }
-  
+
+        // func to change back,font color of selected btn 
+        private void btn(object sender, EventArgs e) 
+        {
+            Button clickedbutton = (Button)sender;
+            if (lastClickedButton != null)
+            {
+                lastClickedButton.BackColor = Color.LightGreen;
+                lastClickedButton.ForeColor = Color.Black;
+
+            }
+            clickedbutton.BackColor = Color.DarkGreen;
+            clickedbutton.ForeColor = Color.White;
+
+            lastClickedButton = clickedbutton;
+        }
+
         private void SidebarTimer_Tick(object sender, EventArgs e)
         {
             if (SidebarExpand)
@@ -58,26 +74,14 @@ namespace Med_Match
             }
         }
 
-     
-
         private void users_btn_Click(object sender, EventArgs e) //Users button
         {
             UsersControl uc = new UsersControl();
             addUsercontrol(uc);
             Button clickedbutton = (Button)sender;
-            if (lastClickedButton != null)
-            {
-                lastClickedButton.BackColor = Color.LightGreen;
-                lastClickedButton.ForeColor = Color.Black;
+            btn(sender, e);
 
-            }
-            clickedbutton.BackColor = Color.DarkGreen;
-            clickedbutton.ForeColor = Color.White;
-
-            lastClickedButton = clickedbutton;
         }
-
-        
 
         private void pictureBox3_Click_1(object sender, EventArgs e)
         {
@@ -101,7 +105,6 @@ namespace Med_Match
 
         }
 
-
         //make black panel override
         private void Logout_panel_Paint(object sender, PaintEventArgs e)
         {
@@ -109,24 +112,13 @@ namespace Med_Match
 
         }
 
-
-        
         private void Home_btn_Click_1(object sender, EventArgs e)
         {
             DashboardControl uc = new DashboardControl();
             addUsercontrol(uc);
             label1.Text = "Dashboard";
-            Button clickedbutton = (Button)sender;
-            if (lastClickedButton != null)
-            {
-                lastClickedButton.BackColor = Color.LightGreen;
-                lastClickedButton.ForeColor = Color.Black;
+            btn(sender, e);
 
-            }
-            clickedbutton.BackColor = Color.DarkGreen;
-            clickedbutton.ForeColor = Color.White;
-
-            lastClickedButton = clickedbutton;
 
 
         }
@@ -166,17 +158,47 @@ namespace Med_Match
         private void drugs_btn_Click(object sender, EventArgs e)
         {
             DrugsTimer.Start();
-            Button clickedbutton = (Button)sender;
-            if (lastClickedButton != null)
-            {
-                lastClickedButton.BackColor = Color.LightGreen;
-                lastClickedButton.ForeColor = Color.Black;
+            btn(sender, e);
 
-            }
-            clickedbutton.BackColor = Color.DarkGreen;
-            clickedbutton.ForeColor = Color.White;
+        }
 
-            lastClickedButton = clickedbutton;
+        private void showDrug_btn_Click(object sender, EventArgs e)
+        {
+            ShowDrugs uc = new ShowDrugs();
+            addUsercontrol(uc);
+            label1.Text = "Drugs";
+            btn(sender, e);
+
+        }
+
+        private void addDrug_btn_Click(object sender, EventArgs e)
+        {
+            AddDrug uc = new AddDrug();
+            addUsercontrol(uc);
+            label1.Text = "Add drugs";
+            btn(sender, e);
+
+        }
+
+        private void editDrug_btn_Click(object sender, EventArgs e)
+        {
+            EditDrugs uc = new EditDrugs();
+            addUsercontrol(uc);
+            label1.Text = "Edit drugs";
+            btn(sender, e);
+        }
+
+        private void orders_btn_Click(object sender, EventArgs e)
+        {
+            ShowOrders uc = new ShowOrders();
+            addUsercontrol(uc);
+            label1.Text = "Orders";
+            btn(sender, e);
+        }
+
+        private void about_btn_Click(object sender, EventArgs e)
+        {
+            btn(sender, e);
         }
     }
 }

@@ -165,6 +165,12 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Forms\AddDrug.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\AddDrug.Designer.cs">
+      <DependentUpon>AddDrug.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\DashBoard.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -177,6 +183,24 @@
     <Compile Include="Forms\DashboardControl.Designer.cs">
       <DependentUpon>DashboardControl.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\EditDrugs.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\EditDrugs.Designer.cs">
+      <DependentUpon>EditDrugs.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ShowDrugs.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\ShowDrugs.Designer.cs">
+      <DependentUpon>ShowDrugs.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ShowOrders.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\ShowOrders.Designer.cs">
+      <DependentUpon>ShowOrders.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\UsersControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -185,11 +209,23 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Forms\AddDrug.resx">
+      <DependentUpon>AddDrug.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\DashBoard.resx">
       <DependentUpon>DashBoard.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\DashboardControl.resx">
       <DependentUpon>DashboardControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\EditDrugs.resx">
+      <DependentUpon>EditDrugs.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ShowDrugs.resx">
+      <DependentUpon>ShowDrugs.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ShowOrders.resx">
+      <DependentUpon>ShowOrders.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\UsersControl.resx">
       <DependentUpon>UsersControl.cs</DependentUpon>
