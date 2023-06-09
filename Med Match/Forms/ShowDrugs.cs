@@ -137,5 +137,11 @@ namespace Med_Match.Forms
             }
             return base.ProcessCmdKey(ref msg, keyData);
         }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+            dataGridView1.ColumnHeadersDefaultCellStyle.BackColor = Color.LightGreen;
+
+        }
     }
 }
