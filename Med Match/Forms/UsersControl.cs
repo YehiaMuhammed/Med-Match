@@ -207,7 +207,11 @@ namespace Med_Match.Forms
             if(e.ColumnIndex == dataGridView1.Columns["Delete"].Index)
             {
                 var documentId = dataGridView1.Rows[e.RowIndex].Cells["_Id"].Value.ToString();
-                MessageBox.Show(documentId);
+                var userName = dataGridView1.Rows[e.RowIndex].Cells["userName"].Value.ToString();
+                var filter = Builders<BsonDocument>.Filter.Eq("_id", ObjectId.Parse(documentId));
+                collection.DeleteOne(filter);
+                MessageBox.Show(userName + " Deleted Successfully");
+                search_btn.PerformClick();
             }
             
         }
