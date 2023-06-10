@@ -200,5 +200,12 @@ namespace Med_Match
         {
             btn(sender, e);
         }
+
+        private void logout_btn_Click(object sender, EventArgs e)
+        {
+            login frm = new login();
+            frm.ShowDialog();
+
+        }
     }
 }
