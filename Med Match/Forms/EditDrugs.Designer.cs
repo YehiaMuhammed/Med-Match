@@ -32,7 +32,19 @@
             this.cbDrugs = new System.Windows.Forms.ComboBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.button1 = new System.Windows.Forms.Button();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.button2 = new System.Windows.Forms.Button();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.activelngredient_txt = new System.Windows.Forms.TextBox();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.drugCat_txt = new System.Windows.Forms.TextBox();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.drugPrice_txt = new System.Windows.Forms.TextBox();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.Drugname_txt = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // cbDrugs
@@ -47,6 +59,8 @@
             this.cbDrugs.TabIndex = 0;
             this.cbDrugs.Text = "Drug";
             this.cbDrugs.TextChanged += new System.EventHandler(this.cbDrugs_TextChanged);
+            this.cbDrugs.Enter += new System.EventHandler(this.cbDrugs_Enter);
+            this.cbDrugs.Leave += new System.EventHandler(this.cbDrugs_Leave);
             // 
             // panel2
             // 
@@ -62,22 +76,150 @@
             this.timer1.Interval = 300;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
-            // button1
+            // label5
             // 
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Location = new System.Drawing.Point(965, 83);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 31);
-            this.button1.TabIndex = 8;
-            this.button1.Text = "Edit drug ";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Bebas Neue", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(756, 391);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(104, 25);
+            this.label5.TabIndex = 40;
+            this.label5.Text = "Drug category";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Bebas Neue", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(158, 382);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(154, 25);
+            this.label4.TabIndex = 39;
+            this.label4.Text = "Drug activeIngredient";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Bebas Neue", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(756, 232);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(79, 25);
+            this.label3.TabIndex = 38;
+            this.label3.Text = "Drug price";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Bebas Neue", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(158, 232);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(79, 25);
+            this.label2.TabIndex = 37;
+            this.label2.Text = "Drug name";
+            // 
+            // button2
+            // 
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.Font = new System.Drawing.Font("Bebas Neue", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.Location = new System.Drawing.Point(625, 559);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(110, 31);
+            this.button2.TabIndex = 36;
+            this.button2.Text = "Save";
+            this.button2.UseVisualStyleBackColor = true;
+            // 
+            // panel4
+            // 
+            this.panel4.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.panel4.Location = new System.Drawing.Point(902, 405);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(277, 1);
+            this.panel4.TabIndex = 35;
+            // 
+            // activelngredient_txt
+            // 
+            this.activelngredient_txt.BackColor = System.Drawing.Color.White;
+            this.activelngredient_txt.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.activelngredient_txt.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.activelngredient_txt.ForeColor = System.Drawing.SystemColors.WindowFrame;
+            this.activelngredient_txt.Location = new System.Drawing.Point(902, 380);
+            this.activelngredient_txt.Name = "activelngredient_txt";
+            this.activelngredient_txt.Size = new System.Drawing.Size(257, 26);
+            this.activelngredient_txt.TabIndex = 34;
+            // 
+            // panel3
+            // 
+            this.panel3.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.panel3.Location = new System.Drawing.Point(343, 403);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(277, 1);
+            this.panel3.TabIndex = 33;
+            // 
+            // drugCat_txt
+            // 
+            this.drugCat_txt.BackColor = System.Drawing.Color.White;
+            this.drugCat_txt.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.drugCat_txt.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.drugCat_txt.ForeColor = System.Drawing.SystemColors.WindowFrame;
+            this.drugCat_txt.Location = new System.Drawing.Point(343, 378);
+            this.drugCat_txt.Name = "drugCat_txt";
+            this.drugCat_txt.Size = new System.Drawing.Size(257, 26);
+            this.drugCat_txt.TabIndex = 32;
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.panel1.Location = new System.Drawing.Point(902, 255);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(277, 1);
+            this.panel1.TabIndex = 30;
+            // 
+            // drugPrice_txt
+            // 
+            this.drugPrice_txt.BackColor = System.Drawing.Color.White;
+            this.drugPrice_txt.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.drugPrice_txt.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.drugPrice_txt.ForeColor = System.Drawing.SystemColors.WindowFrame;
+            this.drugPrice_txt.Location = new System.Drawing.Point(902, 230);
+            this.drugPrice_txt.Name = "drugPrice_txt";
+            this.drugPrice_txt.Size = new System.Drawing.Size(257, 26);
+            this.drugPrice_txt.TabIndex = 28;
+            // 
+            // panel5
+            // 
+            this.panel5.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.panel5.Location = new System.Drawing.Point(317, 255);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(277, 1);
+            this.panel5.TabIndex = 31;
+            // 
+            // Drugname_txt
+            // 
+            this.Drugname_txt.BackColor = System.Drawing.Color.White;
+            this.Drugname_txt.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.Drugname_txt.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Drugname_txt.ForeColor = System.Drawing.SystemColors.WindowFrame;
+            this.Drugname_txt.Location = new System.Drawing.Point(317, 230);
+            this.Drugname_txt.Name = "Drugname_txt";
+            this.Drugname_txt.Size = new System.Drawing.Size(257, 26);
+            this.Drugname_txt.TabIndex = 29;
             // 
             // EditDrugs
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.button2);
+            this.Controls.Add(this.panel4);
+            this.Controls.Add(this.activelngredient_txt);
+            this.Controls.Add(this.panel3);
+            this.Controls.Add(this.drugCat_txt);
+            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.drugPrice_txt);
+            this.Controls.Add(this.panel5);
+            this.Controls.Add(this.Drugname_txt);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.cbDrugs);
             this.Font = new System.Drawing.Font("Bebas Neue", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -85,6 +227,7 @@
             this.Name = "EditDrugs";
             this.Size = new System.Drawing.Size(2667, 1538);
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -93,6 +236,18 @@
         private System.Windows.Forms.ComboBox cbDrugs;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Timer timer1;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.TextBox activelngredient_txt;
+        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.TextBox drugCat_txt;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.TextBox drugPrice_txt;
+        private System.Windows.Forms.Panel panel5;
+        private System.Windows.Forms.TextBox Drugname_txt;
     }
 }

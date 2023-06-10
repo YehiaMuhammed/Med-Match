@@ -59,10 +59,23 @@ namespace Med_Match.Forms
             }
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        
+
+        private void cbDrugs_Enter(object sender, EventArgs e)
         {
-            EditDrug frm = new EditDrug();
-            frm.ShowDialog();
+            if (cbDrugs.Text == "Drug")
+            {
+                cbDrugs.Text = string.Empty;
+            }
+            
+        }
+
+        private void cbDrugs_Leave(object sender, EventArgs e)
+        {
+            if (cbDrugs.Text == string.Empty)
+            {
+                cbDrugs.Text = "Drug";
+            }
         }
     }
 }
