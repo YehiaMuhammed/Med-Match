@@ -118,8 +118,11 @@ namespace Med_Match.Forms
                     {"activeIngredient", drugActiveIngredient },
                 };
 
-                string documentJson = newDrug.ToJson();
-                MessageBox.Show(documentJson, "New Document");
+                //string documentJson = newDrug.ToJson();
+                //MessageBox.Show(documentJson, "New Document");
+
+                collection.InsertOne(newDrug);
+                MessageBox.Show("Drug Added Successfully!");
             }
 
         }
