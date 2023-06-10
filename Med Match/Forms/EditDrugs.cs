@@ -16,6 +16,8 @@ namespace Med_Match.Forms
     public partial class EditDrugs : UserControl
     {
         IMongoCollection<BsonDocument> collection;
+        private int savedSelectionStart;
+        private string drugId;
         public EditDrugs()
         {
             InitializeComponent();
@@ -49,17 +51,24 @@ namespace Med_Match.Forms
                 var filter = Builders<BsonDocument>.Filter.Regex("name", new BsonRegularExpression($"^{drugName}", "i"));
                 var similarDrugs = await collection.Find(filter).ToListAsync();
 
+                savedSelectionStart = cbDrugs.SelectionStart;
+
                 // Clear existing items and add similar drug names to the ComboBox
                 cbDrugs.Items.Clear();
                 foreach (var drug in similarDrugs)
                 {
                     var similarDrugName = drug["name"].AsString;
-                    cbDrugs.Items.Add(similarDrugName);
+                    var similarDrugId = drug["_id"].ToString();
+                    cbDrugs.Items.Add(new KeyValuePair<string, string>(similarDrugName, similarDrugId));
                 }
+                cbDrugs.DisplayMember = "Key";
+                cbDrugs.ValueMember = "Value";
+
+                cbDrugs.SelectionStart = savedSelectionStart;
             }
         }
 
-        
+
 
         private void cbDrugs_Enter(object sender, EventArgs e)
         {
@@ -67,7 +76,7 @@ namespace Med_Match.Forms
             {
                 cbDrugs.Text = string.Empty;
             }
-            
+
         }
 
         private void cbDrugs_Leave(object sender, EventArgs e)
@@ -75,6 +84,73 @@ namespace Med_Match.Forms
             if (cbDrugs.Text == string.Empty)
             {
                 cbDrugs.Text = "Drug";
+            }
+        }
+
+        private void cbDrugs_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            // Retrieve the selected drug item from the ComboBox
+            var selectedDrug = cbDrugs.SelectedItem as KeyValuePair<string, string>?;
+
+            if (selectedDrug != null)
+            {
+                // Find the drug document by _id in the collection
+                var filter = Builders<BsonDocument>.Filter.Eq("_id", ObjectId.Parse(selectedDrug.Value.Value));
+                var selectedDrugDocument = collection.Find(filter).FirstOrDefault();
+
+                if (selectedDrugDocument != null)
+                {
+                    // Retrieve the drug name and ID
+                    if(selectedDrugDocument.Contains("name"))
+                    {
+                        var drugName = selectedDrugDocument["name"].AsString;
+                        Drugname_txt.Text = drugName.ToString();
+                    }
+                    if(selectedDrugDocument.Contains("price"))
+                    {
+                        var drugPrice = selectedDrugDocument["price"];
+                        drugPrice_txt.Text = drugPrice.ToString();
+                    }
+                    if(selectedDrugDocument.Contains("activeIngredient"))
+                    {
+                        var drugActiveIngredient = selectedDrugDocument["activeIngredient"].AsString;
+                        activeIngredient_txt.Text = drugActiveIngredient;
+                    }
+                    if (selectedDrugDocument.Contains("category"))
+                    {
+                        var drugCat = selectedDrugDocument["category"].AsString; ;
+                        drugCat_txt.Text = drugCat;
+                    }
+                    drugId = selectedDrugDocument["_id"].ToString();
+                }
+            }
+        }
+
+        private void save_btn_Click(object sender, EventArgs e)
+        {
+
+            if (drugId != null)
+            {
+                // Find the drug document by _id in the collection
+                var filter = Builders<BsonDocument>.Filter.Eq("_id", ObjectId.Parse(drugId));
+                var selectedDrugDocument = collection.Find(filter).FirstOrDefault();
+
+                if (selectedDrugDocument != null)
+                {
+
+                    selectedDrugDocument["name"] = Drugname_txt.Text;
+                    selectedDrugDocument["price"] = drugPrice_txt.Text;
+                    selectedDrugDocument["activeIngredient"] = activeIngredient_txt.Text;
+                    selectedDrugDocument["category"] = drugCat_txt.Text;
+
+
+
+                    // Replace the existing drug document with the updated document
+                    collection.ReplaceOne(filter, selectedDrugDocument);
+
+                    // Show a message indicating successful update
+                    MessageBox.Show("Drug updated successfully.");
+                }
             }
         }
     }

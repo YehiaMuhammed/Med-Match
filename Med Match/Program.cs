@@ -17,7 +17,8 @@ namespace Med_Match
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new login());
+            DashBoard dashBoard = new DashBoard();
+            Application.Run(dashBoard);
         }
     }
 }

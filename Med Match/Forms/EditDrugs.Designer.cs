@@ -38,9 +38,9 @@
             this.label2 = new System.Windows.Forms.Label();
             this.save_btn = new System.Windows.Forms.Button();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.activelngredient_txt = new System.Windows.Forms.TextBox();
-            this.panel3 = new System.Windows.Forms.Panel();
             this.drugCat_txt = new System.Windows.Forms.TextBox();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.activeIngredient_txt = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.drugPrice_txt = new System.Windows.Forms.TextBox();
             this.panel5 = new System.Windows.Forms.Panel();
@@ -58,6 +58,7 @@
             this.cbDrugs.Size = new System.Drawing.Size(228, 33);
             this.cbDrugs.TabIndex = 0;
             this.cbDrugs.Text = "Drug";
+            this.cbDrugs.SelectedIndexChanged += new System.EventHandler(this.cbDrugs_SelectedIndexChanged);
             this.cbDrugs.TextChanged += new System.EventHandler(this.cbDrugs_TextChanged);
             this.cbDrugs.Enter += new System.EventHandler(this.cbDrugs_Enter);
             this.cbDrugs.Leave += new System.EventHandler(this.cbDrugs_Leave);
@@ -73,7 +74,7 @@
             // 
             // timer1
             // 
-            this.timer1.Interval = 300;
+            this.timer1.Interval = 1000;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
             // label5
@@ -126,6 +127,7 @@
             this.save_btn.TabIndex = 36;
             this.save_btn.Text = "Save";
             this.save_btn.UseVisualStyleBackColor = true;
+            this.save_btn.Click += new System.EventHandler(this.save_btn_Click);
             // 
             // panel4
             // 
@@ -135,16 +137,16 @@
             this.panel4.Size = new System.Drawing.Size(277, 1);
             this.panel4.TabIndex = 35;
             // 
-            // activelngredient_txt
+            // drugCat_txt
             // 
-            this.activelngredient_txt.BackColor = System.Drawing.Color.White;
-            this.activelngredient_txt.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.activelngredient_txt.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.activelngredient_txt.ForeColor = System.Drawing.Color.Black;
-            this.activelngredient_txt.Location = new System.Drawing.Point(902, 380);
-            this.activelngredient_txt.Name = "activelngredient_txt";
-            this.activelngredient_txt.Size = new System.Drawing.Size(257, 26);
-            this.activelngredient_txt.TabIndex = 34;
+            this.drugCat_txt.BackColor = System.Drawing.Color.White;
+            this.drugCat_txt.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.drugCat_txt.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.drugCat_txt.ForeColor = System.Drawing.Color.Black;
+            this.drugCat_txt.Location = new System.Drawing.Point(902, 380);
+            this.drugCat_txt.Name = "drugCat_txt";
+            this.drugCat_txt.Size = new System.Drawing.Size(257, 26);
+            this.drugCat_txt.TabIndex = 34;
             // 
             // panel3
             // 
@@ -154,16 +156,16 @@
             this.panel3.Size = new System.Drawing.Size(277, 1);
             this.panel3.TabIndex = 33;
             // 
-            // drugCat_txt
+            // activeIngredient_txt
             // 
-            this.drugCat_txt.BackColor = System.Drawing.Color.White;
-            this.drugCat_txt.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.drugCat_txt.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.drugCat_txt.ForeColor = System.Drawing.Color.Black;
-            this.drugCat_txt.Location = new System.Drawing.Point(343, 378);
-            this.drugCat_txt.Name = "drugCat_txt";
-            this.drugCat_txt.Size = new System.Drawing.Size(257, 26);
-            this.drugCat_txt.TabIndex = 32;
+            this.activeIngredient_txt.BackColor = System.Drawing.Color.White;
+            this.activeIngredient_txt.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.activeIngredient_txt.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.activeIngredient_txt.ForeColor = System.Drawing.Color.Black;
+            this.activeIngredient_txt.Location = new System.Drawing.Point(343, 378);
+            this.activeIngredient_txt.Name = "activeIngredient_txt";
+            this.activeIngredient_txt.Size = new System.Drawing.Size(257, 26);
+            this.activeIngredient_txt.TabIndex = 32;
             // 
             // panel1
             // 
@@ -214,9 +216,9 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.save_btn);
             this.Controls.Add(this.panel4);
-            this.Controls.Add(this.activelngredient_txt);
-            this.Controls.Add(this.panel3);
             this.Controls.Add(this.drugCat_txt);
+            this.Controls.Add(this.panel3);
+            this.Controls.Add(this.activeIngredient_txt);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.drugPrice_txt);
             this.Controls.Add(this.panel5);
@@ -243,9 +245,9 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button save_btn;
         private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.TextBox activelngredient_txt;
-        private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.TextBox drugCat_txt;
+        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.TextBox activeIngredient_txt;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.TextBox drugPrice_txt;
         private System.Windows.Forms.Panel panel5;
