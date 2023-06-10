@@ -65,7 +65,7 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.panel2.Location = new System.Drawing.Point(580, 113);
+            this.panel2.Location = new System.Drawing.Point(580, 112);
             this.panel2.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(235, 1);
@@ -118,14 +118,17 @@
             // 
             // save_btn
             // 
+            this.save_btn.BackColor = System.Drawing.Color.LimeGreen;
+            this.save_btn.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.save_btn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DarkGreen;
             this.save_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.save_btn.Font = new System.Drawing.Font("Bebas Neue", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.save_btn.Location = new System.Drawing.Point(625, 559);
+            this.save_btn.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.save_btn.Location = new System.Drawing.Point(620, 559);
             this.save_btn.Name = "save_btn";
-            this.save_btn.Size = new System.Drawing.Size(110, 31);
+            this.save_btn.Size = new System.Drawing.Size(111, 37);
             this.save_btn.TabIndex = 36;
             this.save_btn.Text = "Save";
-            this.save_btn.UseVisualStyleBackColor = true;
+            this.save_btn.UseVisualStyleBackColor = false;
             // 
             // panel4
             // 
