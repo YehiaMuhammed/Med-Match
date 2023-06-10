@@ -59,6 +59,7 @@
             // 
             // panelDash
             // 
+            this.panelDash.BackColor = System.Drawing.Color.White;
             this.panelDash.Controls.Add(this.panel3);
             this.panelDash.Controls.Add(this.panel10);
             this.panelDash.Controls.Add(this.panel5);

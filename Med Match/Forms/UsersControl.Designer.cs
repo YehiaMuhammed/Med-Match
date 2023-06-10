@@ -127,6 +127,7 @@
             // 
             // email_txt
             // 
+            this.email_txt.BackColor = System.Drawing.Color.White;
             this.email_txt.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.email_txt.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.email_txt.ForeColor = System.Drawing.SystemColors.WindowFrame;
@@ -140,6 +141,7 @@
             // 
             // Username_txt
             // 
+            this.Username_txt.BackColor = System.Drawing.Color.White;
             this.Username_txt.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.Username_txt.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Username_txt.ForeColor = System.Drawing.SystemColors.WindowFrame;
@@ -155,6 +157,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.White;
             this.Controls.Add(this.panel1);
             this.Name = "UsersControl";
             this.Size = new System.Drawing.Size(2000, 800);

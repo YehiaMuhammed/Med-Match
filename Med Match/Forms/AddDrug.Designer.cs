@@ -43,13 +43,14 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.panel2.Location = new System.Drawing.Point(485, 130);
+            this.panel2.Location = new System.Drawing.Point(485, 137);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(277, 1);
             this.panel2.TabIndex = 8;
             // 
             // Drugname_txt
             // 
+            this.Drugname_txt.BackColor = System.Drawing.Color.White;
             this.Drugname_txt.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.Drugname_txt.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Drugname_txt.ForeColor = System.Drawing.SystemColors.WindowFrame;
@@ -64,13 +65,14 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.panel1.Location = new System.Drawing.Point(940, 130);
+            this.panel1.Location = new System.Drawing.Point(940, 137);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(277, 1);
             this.panel1.TabIndex = 8;
             // 
             // drugPrive_txt
             // 
+            this.drugPrive_txt.BackColor = System.Drawing.Color.White;
             this.drugPrive_txt.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.drugPrive_txt.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.drugPrive_txt.ForeColor = System.Drawing.SystemColors.WindowFrame;
@@ -85,17 +87,18 @@
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.panel3.Location = new System.Drawing.Point(485, 220);
+            this.panel3.Location = new System.Drawing.Point(485, 306);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(277, 1);
             this.panel3.TabIndex = 10;
             // 
             // drugCat_txt
             // 
+            this.drugCat_txt.BackColor = System.Drawing.Color.White;
             this.drugCat_txt.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.drugCat_txt.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.drugCat_txt.ForeColor = System.Drawing.SystemColors.WindowFrame;
-            this.drugCat_txt.Location = new System.Drawing.Point(485, 195);
+            this.drugCat_txt.Location = new System.Drawing.Point(485, 274);
             this.drugCat_txt.Name = "drugCat_txt";
             this.drugCat_txt.Size = new System.Drawing.Size(257, 26);
             this.drugCat_txt.TabIndex = 9;
@@ -106,17 +109,18 @@
             // panel4
             // 
             this.panel4.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.panel4.Location = new System.Drawing.Point(940, 220);
+            this.panel4.Location = new System.Drawing.Point(940, 306);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(277, 1);
             this.panel4.TabIndex = 12;
             // 
             // activelngredient_txt
             // 
+            this.activelngredient_txt.BackColor = System.Drawing.Color.White;
             this.activelngredient_txt.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.activelngredient_txt.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.activelngredient_txt.ForeColor = System.Drawing.SystemColors.WindowFrame;
-            this.activelngredient_txt.Location = new System.Drawing.Point(940, 195);
+            this.activelngredient_txt.Location = new System.Drawing.Point(940, 274);
             this.activelngredient_txt.Name = "activelngredient_txt";
             this.activelngredient_txt.Size = new System.Drawing.Size(257, 26);
             this.activelngredient_txt.TabIndex = 11;
@@ -129,7 +133,7 @@
             this.addDrug_btn.FlatAppearance.BorderSize = 0;
             this.addDrug_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.addDrug_btn.Image = ((System.Drawing.Image)(resources.GetObject("addDrug_btn.Image")));
-            this.addDrug_btn.Location = new System.Drawing.Point(1345, 170);
+            this.addDrug_btn.Location = new System.Drawing.Point(1374, 249);
             this.addDrug_btn.Name = "addDrug_btn";
             this.addDrug_btn.Size = new System.Drawing.Size(85, 51);
             this.addDrug_btn.TabIndex = 13;
@@ -140,6 +144,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.White;
             this.Controls.Add(this.addDrug_btn);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.activelngredient_txt);

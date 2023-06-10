@@ -36,7 +36,7 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.button2 = new System.Windows.Forms.Button();
+            this.save_btn = new System.Windows.Forms.Button();
             this.panel4 = new System.Windows.Forms.Panel();
             this.activelngredient_txt = new System.Windows.Forms.TextBox();
             this.panel3 = new System.Windows.Forms.Panel();
@@ -116,16 +116,16 @@
             this.label2.TabIndex = 37;
             this.label2.Text = "Drug name";
             // 
-            // button2
+            // save_btn
             // 
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Bebas Neue", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(625, 559);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(110, 31);
-            this.button2.TabIndex = 36;
-            this.button2.Text = "Save";
-            this.button2.UseVisualStyleBackColor = true;
+            this.save_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.save_btn.Font = new System.Drawing.Font("Bebas Neue", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.save_btn.Location = new System.Drawing.Point(625, 559);
+            this.save_btn.Name = "save_btn";
+            this.save_btn.Size = new System.Drawing.Size(110, 31);
+            this.save_btn.TabIndex = 36;
+            this.save_btn.Text = "Save";
+            this.save_btn.UseVisualStyleBackColor = true;
             // 
             // panel4
             // 
@@ -140,7 +140,7 @@
             this.activelngredient_txt.BackColor = System.Drawing.Color.White;
             this.activelngredient_txt.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.activelngredient_txt.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.activelngredient_txt.ForeColor = System.Drawing.SystemColors.WindowFrame;
+            this.activelngredient_txt.ForeColor = System.Drawing.Color.Black;
             this.activelngredient_txt.Location = new System.Drawing.Point(902, 380);
             this.activelngredient_txt.Name = "activelngredient_txt";
             this.activelngredient_txt.Size = new System.Drawing.Size(257, 26);
@@ -159,7 +159,7 @@
             this.drugCat_txt.BackColor = System.Drawing.Color.White;
             this.drugCat_txt.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.drugCat_txt.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.drugCat_txt.ForeColor = System.Drawing.SystemColors.WindowFrame;
+            this.drugCat_txt.ForeColor = System.Drawing.Color.Black;
             this.drugCat_txt.Location = new System.Drawing.Point(343, 378);
             this.drugCat_txt.Name = "drugCat_txt";
             this.drugCat_txt.Size = new System.Drawing.Size(257, 26);
@@ -178,7 +178,7 @@
             this.drugPrice_txt.BackColor = System.Drawing.Color.White;
             this.drugPrice_txt.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.drugPrice_txt.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.drugPrice_txt.ForeColor = System.Drawing.SystemColors.WindowFrame;
+            this.drugPrice_txt.ForeColor = System.Drawing.Color.Black;
             this.drugPrice_txt.Location = new System.Drawing.Point(902, 230);
             this.drugPrice_txt.Name = "drugPrice_txt";
             this.drugPrice_txt.Size = new System.Drawing.Size(257, 26);
@@ -197,7 +197,7 @@
             this.Drugname_txt.BackColor = System.Drawing.Color.White;
             this.Drugname_txt.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.Drugname_txt.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Drugname_txt.ForeColor = System.Drawing.SystemColors.WindowFrame;
+            this.Drugname_txt.ForeColor = System.Drawing.Color.Black;
             this.Drugname_txt.Location = new System.Drawing.Point(317, 230);
             this.Drugname_txt.Name = "Drugname_txt";
             this.Drugname_txt.Size = new System.Drawing.Size(257, 26);
@@ -207,11 +207,12 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.White;
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.button2);
+            this.Controls.Add(this.save_btn);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.activelngredient_txt);
             this.Controls.Add(this.panel3);
@@ -240,7 +241,7 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button save_btn;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.TextBox activelngredient_txt;
         private System.Windows.Forms.Panel panel3;
