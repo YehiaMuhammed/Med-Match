@@ -58,5 +58,11 @@ namespace Med_Match.Forms
                 }
             }
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            EditDrug frm = new EditDrug();
+            frm.ShowDialog();
+        }
     }
 }
