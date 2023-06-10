@@ -17,7 +17,8 @@ namespace Med_Match
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new login());
+            login login = new login();
+            Application.Run(login);
         }
     }
 }

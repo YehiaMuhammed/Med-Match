@@ -118,10 +118,21 @@ namespace Med_Match.Forms
                     {"activeIngredient", drugActiveIngredient },
                 };
 
-                string documentJson = newDrug.ToJson();
-                MessageBox.Show(documentJson, "New Document");
+             
+
+                collection.InsertOne(newDrug);
+                MessageBox.Show("Drug Added Successfully!");
             }
 
+        }
+        protected override bool ProcessCmdKey(ref Message msg, Keys keyData)
+        {
+            if (keyData == Keys.Enter)
+            {
+                addDrug_btn.PerformClick();
+                return true;
+            }
+            return base.ProcessCmdKey(ref msg, keyData);
         }
     }
 }

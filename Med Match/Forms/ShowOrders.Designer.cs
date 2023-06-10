@@ -121,6 +121,7 @@
             this.search_btn.Size = new System.Drawing.Size(68, 46);
             this.search_btn.TabIndex = 2;
             this.search_btn.UseVisualStyleBackColor = true;
+            this.search_btn.Click += new System.EventHandler(this.search_btn_Click);
             // 
             // Uphone_txt
             // 
