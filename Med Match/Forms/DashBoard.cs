@@ -19,15 +19,25 @@ namespace Med_Match
         bool SidebarExpand;
         bool DrugsExpand;
         private Button lastClickedButton;
+        private login _login;
+        private string _name;
 
         public DashBoard()
         {
             InitializeComponent();
         }
+        public DashBoard(login login, string name)
+        {
+            InitializeComponent();
+            _login = login;
+            _name = name;
+            label8.Text = name;
+        }
 
         private void pictureBox2_Click(object sender, EventArgs e)
         {
             this.Close();
+            _login.Close();
         }
 
         // func to change back,font color of selected btn 
@@ -203,9 +213,23 @@ namespace Med_Match
 
         private void logout_btn_Click(object sender, EventArgs e)
         {
-            login frm = new login();
-            frm.ShowDialog();
+           this.Close();
+            
+        }
 
+        private void DashBoard_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            var OpenForms = Application.OpenForms.Cast<Form>();
+            var isOpen = OpenForms.Any(q => q.Name == "login");
+            if (!isOpen)
+            {
+                login frm = new login();
+                frm.Show();
+            }
+            else
+            {
+                _login.Show();
+            }
         }
     }
 }

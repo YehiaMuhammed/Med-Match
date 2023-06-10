@@ -81,10 +81,18 @@ namespace Med_Match.Forms
 
         private void login_btn_Click(object sender, EventArgs e)
         {
-            if (username_txt.Text == "1" || Password_txt.Text == "1")
+            if (Password_txt.Text == "admin")
             {
-                DashBoard frm = new DashBoard();
-                frm.ShowDialog();
+                var OpenForms = Application.OpenForms.Cast<Form>();
+                var isOpen = OpenForms.Any(q => q.Name == "DashBoard");
+                if(!isOpen)
+                {
+                    DashBoard frm = new DashBoard(this, username_txt.Text);
+                    frm.Show();
+                    this.Hide();
+                }
+                
+                
             }
             else
             {
