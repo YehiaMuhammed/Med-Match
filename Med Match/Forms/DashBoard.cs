@@ -90,6 +90,7 @@ namespace Med_Match
             addUsercontrol(uc);
             Button clickedbutton = (Button)sender;
             btn(sender, e);
+            label1.Text = "Users";
 
         }
 
