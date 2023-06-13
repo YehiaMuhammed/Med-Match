@@ -64,6 +64,9 @@ namespace Med_Match.Forms
             {
                 Password_txt.ForeColor = Color.Gray;
                 Password_txt.Text = "Password...";
+                Password_txt.PasswordChar = visibleChar;
+
+
             }
         }
 
