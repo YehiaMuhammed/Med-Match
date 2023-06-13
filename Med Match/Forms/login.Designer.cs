@@ -131,7 +131,7 @@
             this.login_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.login_btn.Font = new System.Drawing.Font("Righteous", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.login_btn.ForeColor = System.Drawing.Color.Black;
-            this.login_btn.Location = new System.Drawing.Point(105, 600);
+            this.login_btn.Location = new System.Drawing.Point(112, 600);
             this.login_btn.Name = "login_btn";
             this.login_btn.Size = new System.Drawing.Size(142, 47);
             this.login_btn.TabIndex = 37;

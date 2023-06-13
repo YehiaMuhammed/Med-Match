@@ -18,7 +18,10 @@ namespace Med_Match.Forms
         public login()
         {
             InitializeComponent();
-            Password_txt.PasswordChar = hiddenChar;
+            if (Password_txt.Text=="Password...")
+            {
+                Password_txt.PasswordChar = visibleChar;
+            }
 
         }
 
@@ -51,6 +54,9 @@ namespace Med_Match.Forms
             {
                 Password_txt.Text = string.Empty;
                 Password_txt.ForeColor = Color.Black;
+                Password_txt.PasswordChar = hiddenChar;
+
+
             }
         }
 
