@@ -95,8 +95,7 @@ namespace Med_Match.Forms
                     frm.Show();
                     this.Hide();
                 }
-                
-                
+                    
             }
             else
             {
