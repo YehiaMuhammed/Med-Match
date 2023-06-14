@@ -138,6 +138,7 @@ namespace Med_Match
         {
             DashboardControl uc = new DashboardControl();
             addUsercontrol(uc);
+         
         }
 
         private void DrugsTimer_Tick(object sender, EventArgs e)

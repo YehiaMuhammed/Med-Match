@@ -22,7 +22,6 @@ namespace Med_Match.Forms
             {
                 Password_txt.PasswordChar = visibleChar;
             }
-
         }
 
         private void pictureBox2_Click(object sender, EventArgs e)
@@ -65,8 +64,6 @@ namespace Med_Match.Forms
                 Password_txt.ForeColor = Color.Gray;
                 Password_txt.Text = "Password...";
                 Password_txt.PasswordChar = visibleChar;
-
-
             }
         }
 

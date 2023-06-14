@@ -80,7 +80,7 @@
             // panel10
             // 
             this.panel10.Controls.Add(this.orders_btn);
-            this.panel10.Location = new System.Drawing.Point(3, 370);
+            this.panel10.Location = new System.Drawing.Point(3, 374);
             this.panel10.Name = "panel10";
             this.panel10.Size = new System.Drawing.Size(268, 47);
             this.panel10.TabIndex = 4;
@@ -104,14 +104,14 @@
             // Drugspanel
             // 
             this.Drugspanel.Controls.Add(this.editDrug_btn);
+            this.Drugspanel.Controls.Add(this.drugs_btn);
             this.Drugspanel.Controls.Add(this.showDrug_btn);
             this.Drugspanel.Controls.Add(this.addDrug_btn);
-            this.Drugspanel.Controls.Add(this.drugs_btn);
             this.Drugspanel.Location = new System.Drawing.Point(3, 312);
-            this.Drugspanel.MaximumSize = new System.Drawing.Size(268, 178);
-            this.Drugspanel.MinimumSize = new System.Drawing.Size(268, 52);
+            this.Drugspanel.MaximumSize = new System.Drawing.Size(303, 187);
+            this.Drugspanel.MinimumSize = new System.Drawing.Size(303, 56);
             this.Drugspanel.Name = "Drugspanel";
-            this.Drugspanel.Size = new System.Drawing.Size(268, 52);
+            this.Drugspanel.Size = new System.Drawing.Size(303, 56);
             this.Drugspanel.TabIndex = 5;
             // 
             // editDrug_btn
@@ -121,11 +121,11 @@
             this.editDrug_btn.Font = new System.Drawing.Font("Bebas Neue", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.editDrug_btn.Image = ((System.Drawing.Image)(resources.GetObject("editDrug_btn.Image")));
             this.editDrug_btn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.editDrug_btn.Location = new System.Drawing.Point(0, 136);
+            this.editDrug_btn.Location = new System.Drawing.Point(35, 146);
             this.editDrug_btn.Name = "editDrug_btn";
             this.editDrug_btn.Size = new System.Drawing.Size(268, 47);
             this.editDrug_btn.TabIndex = 16;
-            this.editDrug_btn.Text = "                         edit drug";
+            this.editDrug_btn.Text = "                     edit drug";
             this.editDrug_btn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.editDrug_btn.UseVisualStyleBackColor = true;
             this.editDrug_btn.Click += new System.EventHandler(this.editDrug_btn_Click);
@@ -137,11 +137,11 @@
             this.showDrug_btn.Font = new System.Drawing.Font("Bebas Neue", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.showDrug_btn.Image = ((System.Drawing.Image)(resources.GetObject("showDrug_btn.Image")));
             this.showDrug_btn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.showDrug_btn.Location = new System.Drawing.Point(0, 50);
+            this.showDrug_btn.Location = new System.Drawing.Point(35, 58);
             this.showDrug_btn.Name = "showDrug_btn";
             this.showDrug_btn.Size = new System.Drawing.Size(268, 47);
             this.showDrug_btn.TabIndex = 15;
-            this.showDrug_btn.Text = "                         Show drugs";
+            this.showDrug_btn.Text = "                     Show drugs";
             this.showDrug_btn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.showDrug_btn.UseVisualStyleBackColor = true;
             this.showDrug_btn.Click += new System.EventHandler(this.showDrug_btn_Click);
@@ -153,11 +153,11 @@
             this.addDrug_btn.Font = new System.Drawing.Font("Bebas Neue", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.addDrug_btn.Image = ((System.Drawing.Image)(resources.GetObject("addDrug_btn.Image")));
             this.addDrug_btn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.addDrug_btn.Location = new System.Drawing.Point(0, 94);
+            this.addDrug_btn.Location = new System.Drawing.Point(35, 102);
             this.addDrug_btn.Name = "addDrug_btn";
             this.addDrug_btn.Size = new System.Drawing.Size(268, 47);
             this.addDrug_btn.TabIndex = 15;
-            this.addDrug_btn.Text = "                         Add drug";
+            this.addDrug_btn.Text = "                     Add drug";
             this.addDrug_btn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.addDrug_btn.UseVisualStyleBackColor = true;
             this.addDrug_btn.Click += new System.EventHandler(this.addDrug_btn_Click);
@@ -169,7 +169,7 @@
             this.drugs_btn.Font = new System.Drawing.Font("Bebas Neue", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.drugs_btn.Image = ((System.Drawing.Image)(resources.GetObject("drugs_btn.Image")));
             this.drugs_btn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.drugs_btn.Location = new System.Drawing.Point(0, 0);
+            this.drugs_btn.Location = new System.Drawing.Point(3, 0);
             this.drugs_btn.Name = "drugs_btn";
             this.drugs_btn.Size = new System.Drawing.Size(268, 52);
             this.drugs_btn.TabIndex = 2;
@@ -272,13 +272,13 @@
             // 
             // label8
             // 
-            this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Bebas Neue", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(87, 120);
+            this.label8.Location = new System.Drawing.Point(63, 120);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(98, 31);
+            this.label8.Size = new System.Drawing.Size(151, 31);
             this.label8.TabIndex = 12;
             this.label8.Text = "User name";
+            this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // pictureBox3
             // 
@@ -295,7 +295,7 @@
             // panel2
             // 
             this.panel2.Controls.Add(this.about_btn);
-            this.panel2.Location = new System.Drawing.Point(3, 423);
+            this.panel2.Location = new System.Drawing.Point(3, 427);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(268, 47);
             this.panel2.TabIndex = 7;
@@ -418,7 +418,6 @@
             this.panel8.ResumeLayout(false);
             this.Sidebar.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.panel2.ResumeLayout(false);
