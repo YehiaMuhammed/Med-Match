@@ -151,9 +151,9 @@
             this.label10.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.label10.Location = new System.Drawing.Point(28, 39);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(111, 31);
+            this.label10.Size = new System.Drawing.Size(84, 31);
             this.label10.TabIndex = 0;
-            this.label10.Text = "Total drugs";
+            this.label10.Text = "revenue ";
             // 
             // panel5
             // 
