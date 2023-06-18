@@ -170,5 +170,13 @@ namespace Med_Match.Forms
             }
             
         }
+
+        private void ShowDrugs_Load(object sender, EventArgs e)
+        {
+            dataGridView1.ColumnHeadersDefaultCellStyle.BackColor = Color.LightGreen;
+            dataGridView1.ColumnHeadersDefaultCellStyle.Font = new Font("Bebas Neue",18, FontStyle.Regular);
+            dataGridView1.DefaultCellStyle.Font = new Font("Bebas Neue", 15, FontStyle.Regular);
+
+        }
     }
 }

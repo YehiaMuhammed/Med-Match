@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DashboardControl));
-            this.panelDash = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.label3 = new System.Windows.Forms.Label();
@@ -46,7 +45,6 @@
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
-            this.panelDash.SuspendLayout();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.panel10.SuspendLayout();
@@ -57,25 +55,13 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             this.SuspendLayout();
             // 
-            // panelDash
-            // 
-            this.panelDash.BackColor = System.Drawing.Color.White;
-            this.panelDash.Controls.Add(this.panel3);
-            this.panelDash.Controls.Add(this.panel10);
-            this.panelDash.Controls.Add(this.panel5);
-            this.panelDash.Controls.Add(this.panel7);
-            this.panelDash.Location = new System.Drawing.Point(0, 0);
-            this.panelDash.Name = "panelDash";
-            this.panelDash.Size = new System.Drawing.Size(1400, 800);
-            this.panelDash.TabIndex = 15;
-            // 
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.SystemColors.MenuHighlight;
             this.panel3.Controls.Add(this.pictureBox4);
             this.panel3.Controls.Add(this.label3);
             this.panel3.Controls.Add(this.Label2);
-            this.panel3.Location = new System.Drawing.Point(274, 76);
+            this.panel3.Location = new System.Drawing.Point(216, 128);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(450, 153);
             this.panel3.TabIndex = 9;
@@ -118,7 +104,7 @@
             this.panel10.Controls.Add(this.pictureBox8);
             this.panel10.Controls.Add(this.label9);
             this.panel10.Controls.Add(this.label10);
-            this.panel10.Location = new System.Drawing.Point(793, 298);
+            this.panel10.Location = new System.Drawing.Point(735, 350);
             this.panel10.Name = "panel10";
             this.panel10.Size = new System.Drawing.Size(450, 153);
             this.panel10.TabIndex = 13;
@@ -161,7 +147,7 @@
             this.panel5.Controls.Add(this.pictureBox5);
             this.panel5.Controls.Add(this.label4);
             this.panel5.Controls.Add(this.label5);
-            this.panel5.Location = new System.Drawing.Point(274, 298);
+            this.panel5.Location = new System.Drawing.Point(216, 350);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(450, 153);
             this.panel5.TabIndex = 10;
@@ -204,7 +190,7 @@
             this.panel7.Controls.Add(this.pictureBox6);
             this.panel7.Controls.Add(this.label6);
             this.panel7.Controls.Add(this.label7);
-            this.panel7.Location = new System.Drawing.Point(793, 76);
+            this.panel7.Location = new System.Drawing.Point(735, 128);
             this.panel7.Name = "panel7";
             this.panel7.Size = new System.Drawing.Size(450, 153);
             this.panel7.TabIndex = 11;
@@ -245,10 +231,13 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.panelDash);
+            this.BackColor = System.Drawing.Color.White;
+            this.Controls.Add(this.panel3);
+            this.Controls.Add(this.panel10);
+            this.Controls.Add(this.panel5);
+            this.Controls.Add(this.panel7);
             this.Name = "DashboardControl";
             this.Size = new System.Drawing.Size(1335, 699);
-            this.panelDash.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
@@ -266,8 +255,6 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.Panel panelDash;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.Label label3;
