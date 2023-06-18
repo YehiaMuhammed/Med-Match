@@ -53,16 +53,16 @@
             this.panel1.Controls.Add(this.DrugCat_txt);
             this.panel1.Controls.Add(this.Drugname_txt);
             this.panel1.Font = new System.Drawing.Font("Bebas Neue", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.panel1.Location = new System.Drawing.Point(198, 3);
+            this.panel1.Location = new System.Drawing.Point(22, 12);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1387, 589);
+            this.panel1.Size = new System.Drawing.Size(1375, 675);
             this.panel1.TabIndex = 1;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.panel2.Location = new System.Drawing.Point(265, 65);
+            this.panel2.Location = new System.Drawing.Point(404, 65);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(277, 1);
             this.panel2.TabIndex = 6;
@@ -70,7 +70,7 @@
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.panel3.Location = new System.Drawing.Point(669, 65);
+            this.panel3.Location = new System.Drawing.Point(808, 65);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(277, 1);
             this.panel3.TabIndex = 5;
@@ -88,7 +88,7 @@
             this.dataGridView1.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Bebas Neue", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Bebas Neue", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Control;
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
@@ -105,12 +105,12 @@
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle3;
             this.dataGridView1.EnableHeadersVisualStyles = false;
-            this.dataGridView1.Location = new System.Drawing.Point(27, 112);
+            this.dataGridView1.Location = new System.Drawing.Point(184, 140);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             this.dataGridView1.RowHeadersVisible = false;
-            this.dataGridView1.Size = new System.Drawing.Size(1269, 333);
+            this.dataGridView1.Size = new System.Drawing.Size(1163, 333);
             this.dataGridView1.TabIndex = 3;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
@@ -119,7 +119,7 @@
             this.search_btn.FlatAppearance.BorderSize = 0;
             this.search_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.search_btn.Image = ((System.Drawing.Image)(resources.GetObject("search_btn.Image")));
-            this.search_btn.Location = new System.Drawing.Point(1054, 27);
+            this.search_btn.Location = new System.Drawing.Point(1205, 20);
             this.search_btn.Name = "search_btn";
             this.search_btn.Size = new System.Drawing.Size(68, 46);
             this.search_btn.TabIndex = 2;
@@ -132,7 +132,7 @@
             this.DrugCat_txt.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.DrugCat_txt.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.DrugCat_txt.ForeColor = System.Drawing.SystemColors.WindowFrame;
-            this.DrugCat_txt.Location = new System.Drawing.Point(669, 40);
+            this.DrugCat_txt.Location = new System.Drawing.Point(808, 33);
             this.DrugCat_txt.Name = "DrugCat_txt";
             this.DrugCat_txt.Size = new System.Drawing.Size(257, 26);
             this.DrugCat_txt.TabIndex = 1;
@@ -146,7 +146,7 @@
             this.Drugname_txt.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.Drugname_txt.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Drugname_txt.ForeColor = System.Drawing.SystemColors.WindowFrame;
-            this.Drugname_txt.Location = new System.Drawing.Point(265, 40);
+            this.Drugname_txt.Location = new System.Drawing.Point(404, 33);
             this.Drugname_txt.Name = "Drugname_txt";
             this.Drugname_txt.Size = new System.Drawing.Size(257, 26);
             this.Drugname_txt.TabIndex = 0;
@@ -161,7 +161,7 @@
             this.BackColor = System.Drawing.Color.White;
             this.Controls.Add(this.panel1);
             this.Name = "ShowDrugs";
-            this.Size = new System.Drawing.Size(2000, 800);
+            this.Size = new System.Drawing.Size(1400, 800);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();

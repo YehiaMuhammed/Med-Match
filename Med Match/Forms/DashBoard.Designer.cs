@@ -35,9 +35,9 @@
             this.orders_btn = new System.Windows.Forms.Button();
             this.Drugspanel = new System.Windows.Forms.Panel();
             this.editDrug_btn = new System.Windows.Forms.Button();
+            this.drugs_btn = new System.Windows.Forms.Button();
             this.showDrug_btn = new System.Windows.Forms.Button();
             this.addDrug_btn = new System.Windows.Forms.Button();
-            this.drugs_btn = new System.Windows.Forms.Button();
             this.UsersPanel = new System.Windows.Forms.Panel();
             this.users_btn = new System.Windows.Forms.Button();
             this.panel8 = new System.Windows.Forms.Panel();
@@ -130,6 +130,22 @@
             this.editDrug_btn.UseVisualStyleBackColor = true;
             this.editDrug_btn.Click += new System.EventHandler(this.editDrug_btn_Click);
             // 
+            // drugs_btn
+            // 
+            this.drugs_btn.FlatAppearance.BorderSize = 0;
+            this.drugs_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.drugs_btn.Font = new System.Drawing.Font("Bebas Neue", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.drugs_btn.Image = ((System.Drawing.Image)(resources.GetObject("drugs_btn.Image")));
+            this.drugs_btn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.drugs_btn.Location = new System.Drawing.Point(3, 0);
+            this.drugs_btn.Name = "drugs_btn";
+            this.drugs_btn.Size = new System.Drawing.Size(268, 52);
+            this.drugs_btn.TabIndex = 2;
+            this.drugs_btn.Text = "                         Drugs";
+            this.drugs_btn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.drugs_btn.UseVisualStyleBackColor = true;
+            this.drugs_btn.Click += new System.EventHandler(this.drugs_btn_Click);
+            // 
             // showDrug_btn
             // 
             this.showDrug_btn.FlatAppearance.BorderSize = 0;
@@ -161,22 +177,6 @@
             this.addDrug_btn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.addDrug_btn.UseVisualStyleBackColor = true;
             this.addDrug_btn.Click += new System.EventHandler(this.addDrug_btn_Click);
-            // 
-            // drugs_btn
-            // 
-            this.drugs_btn.FlatAppearance.BorderSize = 0;
-            this.drugs_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.drugs_btn.Font = new System.Drawing.Font("Bebas Neue", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.drugs_btn.Image = ((System.Drawing.Image)(resources.GetObject("drugs_btn.Image")));
-            this.drugs_btn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.drugs_btn.Location = new System.Drawing.Point(3, 0);
-            this.drugs_btn.Name = "drugs_btn";
-            this.drugs_btn.Size = new System.Drawing.Size(268, 52);
-            this.drugs_btn.TabIndex = 2;
-            this.drugs_btn.Text = "                         Drugs";
-            this.drugs_btn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.drugs_btn.UseVisualStyleBackColor = true;
-            this.drugs_btn.Click += new System.EventHandler(this.drugs_btn_Click);
             // 
             // UsersPanel
             // 

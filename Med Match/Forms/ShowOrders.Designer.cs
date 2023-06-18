@@ -51,9 +51,9 @@
             this.panel1.Controls.Add(this.search_btn);
             this.panel1.Controls.Add(this.Uphone_txt);
             this.panel1.Font = new System.Drawing.Font("Bebas Neue", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.panel1.Location = new System.Drawing.Point(227, 23);
+            this.panel1.Location = new System.Drawing.Point(189, 17);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1387, 589);
+            this.panel1.Size = new System.Drawing.Size(1211, 589);
             this.panel1.TabIndex = 2;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
@@ -104,12 +104,12 @@
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle3;
             this.dataGridView1.EnableHeadersVisualStyles = false;
-            this.dataGridView1.Location = new System.Drawing.Point(27, 112);
+            this.dataGridView1.Location = new System.Drawing.Point(67, 144);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             this.dataGridView1.RowHeadersVisible = false;
-            this.dataGridView1.Size = new System.Drawing.Size(1269, 333);
+            this.dataGridView1.Size = new System.Drawing.Size(1126, 333);
             this.dataGridView1.TabIndex = 3;
             // 
             // search_btn
@@ -145,7 +145,7 @@
             this.BackColor = System.Drawing.Color.White;
             this.Controls.Add(this.panel1);
             this.Name = "ShowOrders";
-            this.Size = new System.Drawing.Size(2000, 800);
+            this.Size = new System.Drawing.Size(1400, 800);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
