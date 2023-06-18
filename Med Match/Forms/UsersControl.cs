@@ -204,15 +204,27 @@ namespace Med_Match.Forms
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            if(e.ColumnIndex == dataGridView1.Columns["Delete"].Index)
+            try
             {
-                var documentId = dataGridView1.Rows[e.RowIndex].Cells["_Id"].Value.ToString();
-                var userName = dataGridView1.Rows[e.RowIndex].Cells["userName"].Value.ToString();
-                var filter = Builders<BsonDocument>.Filter.Eq("_id", ObjectId.Parse(documentId));
-                collection.DeleteOne(filter);
-                MessageBox.Show(userName + " Deleted Successfully");
-                search_btn.PerformClick();
+                if (e.ColumnIndex == dataGridView1.Columns["Delete"].Index)
+                {
+                    var documentId = dataGridView1.Rows[e.RowIndex].Cells["_Id"].Value.ToString();
+                    var userName = dataGridView1.Rows[e.RowIndex].Cells["userName"].Value.ToString();
+                    var filter = Builders<BsonDocument>.Filter.Eq("_id", ObjectId.Parse(documentId));
+                    DialogResult dr = MessageBox.Show("Do You Want To Delete This User?", "Delete", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+                    if (dr == DialogResult.Yes)
+                    {
+                        collection.DeleteOne(filter);
+                        MessageBox.Show(userName + " Deleted Successfully");
+                        search_btn.PerformClick();
+                    }
+                }
             }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            
             
         }
     }
