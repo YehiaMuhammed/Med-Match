@@ -289,7 +289,6 @@
     </Compile>
     <None Include="libmongocrypt.dylib" />
     <None Include="libmongocrypt.so" />
-    <None Include="Med Match_TemporaryKey.pfx" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
