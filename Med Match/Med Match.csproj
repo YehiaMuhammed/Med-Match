@@ -218,6 +218,12 @@
     <Compile Include="Forms\EditDrugs.Designer.cs">
       <DependentUpon>EditDrugs.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\LoadingForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\LoadingForm.Designer.cs">
+      <DependentUpon>LoadingForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\login.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -255,6 +261,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\EditDrugs.resx">
       <DependentUpon>EditDrugs.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\LoadingForm.resx">
+      <DependentUpon>LoadingForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\login.resx">
       <DependentUpon>login.cs</DependentUpon>
@@ -327,6 +336,8 @@
     <None Include="Resources\home %281%29.png" />
     <None Include="Resources\man.png" />
     <None Include="Resources\hide.png" />
+    <Content Include="Resources\LoadingGif.gif" />
+    <Content Include="Resources\LoadingGif2.gif" />
     <Content Include="Resources\MedMatchLogo.png" />
     <Content Include="Resources\MedMatchLogo2.png" />
   </ItemGroup>

@@ -84,14 +84,23 @@ namespace Med_Match
             }
         }
 
-        private void users_btn_Click(object sender, EventArgs e) //Users button
+        private async void users_btn_Click(object sender, EventArgs e) //Users button
         {
+            LoadingForm loadingForm = new LoadingForm();
+            loadingForm.Show();
+
+            await loadUserAsync();
+
             UsersControl uc = new UsersControl();
             addUsercontrol(uc);
             Button clickedbutton = (Button)sender;
             btn(sender, e);
             label1.Text = "Users";
-
+            loadingForm.Close();
+        }
+        private async Task loadUserAsync()
+        {
+            await Task.Delay(2000);
         }
 
         private void pictureBox3_Click_1(object sender, EventArgs e)
@@ -200,12 +209,21 @@ namespace Med_Match
             btn(sender, e);
         }
 
-        private void orders_btn_Click(object sender, EventArgs e)
+        private async void orders_btn_Click(object sender, EventArgs e)
         {
+            LoadingForm loadingForm = new LoadingForm();
+            loadingForm.Show();
+
+            await loadOrdersAsync();
             ShowOrders uc = new ShowOrders();
             addUsercontrol(uc);
             label1.Text = "Orders";
             btn(sender, e);
+            loadingForm.Close();
+        }
+        private async Task loadOrdersAsync()
+        {
+            await Task.Delay(1000);
         }
 
         private void about_btn_Click(object sender, EventArgs e)

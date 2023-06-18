@@ -5,6 +5,7 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -83,24 +84,34 @@ namespace Med_Match.Forms
             }
         }
 
-        private void login_btn_Click(object sender, EventArgs e)
+        private async void login_btn_Click(object sender, EventArgs e)
         {
             if (Password_txt.Text == "admin")
             {
+                LoadingForm loadingForm = new LoadingForm();
+                loadingForm.Show();
+
+                await loadDashboardAsync();
                 var OpenForms = Application.OpenForms.Cast<Form>();
                 var isOpen = OpenForms.Any(q => q.Name == "DashBoard");
-                if(!isOpen)
+                if (!isOpen)
                 {
                     DashBoard frm = new DashBoard(this, username_txt.Text);
                     frm.Show();
+                    loadingForm.Close();
                     this.Hide();
                 }
-                    
             }
             else
             {
                 MessageBox.Show("Invalid username or password");
             }
+
         }
+        private async Task loadDashboardAsync()
+        {
+            await Task.Delay(4500);
+        }
+
     }
 }
