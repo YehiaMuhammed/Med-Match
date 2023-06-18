@@ -83,7 +83,7 @@
             // pictureBox4
             // 
             this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
-            this.pictureBox4.Location = new System.Drawing.Point(169, 39);
+            this.pictureBox4.Location = new System.Drawing.Point(292, 39);
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.Size = new System.Drawing.Size(119, 99);
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -114,7 +114,7 @@
             // 
             // panel10
             // 
-            this.panel10.BackColor = System.Drawing.Color.Crimson;
+            this.panel10.BackColor = System.Drawing.Color.Teal;
             this.panel10.Controls.Add(this.pictureBox8);
             this.panel10.Controls.Add(this.label9);
             this.panel10.Controls.Add(this.label10);
@@ -126,7 +126,7 @@
             // pictureBox8
             // 
             this.pictureBox8.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox8.Image")));
-            this.pictureBox8.Location = new System.Drawing.Point(169, 39);
+            this.pictureBox8.Location = new System.Drawing.Point(306, 28);
             this.pictureBox8.Name = "pictureBox8";
             this.pictureBox8.Size = new System.Drawing.Size(119, 99);
             this.pictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -157,7 +157,7 @@
             // 
             // panel5
             // 
-            this.panel5.BackColor = System.Drawing.Color.Tomato;
+            this.panel5.BackColor = System.Drawing.Color.Indigo;
             this.panel5.Controls.Add(this.pictureBox5);
             this.panel5.Controls.Add(this.label4);
             this.panel5.Controls.Add(this.label5);
@@ -169,7 +169,7 @@
             // pictureBox5
             // 
             this.pictureBox5.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox5.Image")));
-            this.pictureBox5.Location = new System.Drawing.Point(169, 39);
+            this.pictureBox5.Location = new System.Drawing.Point(292, 39);
             this.pictureBox5.Name = "pictureBox5";
             this.pictureBox5.Size = new System.Drawing.Size(119, 99);
             this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -200,7 +200,7 @@
             // 
             // panel7
             // 
-            this.panel7.BackColor = System.Drawing.Color.DarkOrchid;
+            this.panel7.BackColor = System.Drawing.Color.Tomato;
             this.panel7.Controls.Add(this.pictureBox6);
             this.panel7.Controls.Add(this.label6);
             this.panel7.Controls.Add(this.label7);
@@ -212,7 +212,7 @@
             // pictureBox6
             // 
             this.pictureBox6.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox6.Image")));
-            this.pictureBox6.Location = new System.Drawing.Point(169, 39);
+            this.pictureBox6.Location = new System.Drawing.Point(306, 26);
             this.pictureBox6.Name = "pictureBox6";
             this.pictureBox6.Size = new System.Drawing.Size(119, 99);
             this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
