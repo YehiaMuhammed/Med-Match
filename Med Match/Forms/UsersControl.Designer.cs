@@ -161,6 +161,7 @@
             this.Controls.Add(this.panel1);
             this.Name = "UsersControl";
             this.Size = new System.Drawing.Size(1400, 800);
+            this.Load += new System.EventHandler(this.UsersControl_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
