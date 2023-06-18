@@ -391,9 +391,9 @@
             // panelContainer
             // 
             this.panelContainer.BackColor = System.Drawing.Color.White;
-            this.panelContainer.Location = new System.Drawing.Point(65, 101);
+            this.panelContainer.Location = new System.Drawing.Point(56, 101);
             this.panelContainer.Name = "panelContainer";
-            this.panelContainer.Size = new System.Drawing.Size(1335, 699);
+            this.panelContainer.Size = new System.Drawing.Size(1344, 699);
             this.panelContainer.TabIndex = 14;
             // 
             // DashBoard

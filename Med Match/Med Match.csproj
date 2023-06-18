@@ -248,6 +248,12 @@
     <Compile Include="Forms\UsersControl.Designer.cs">
       <DependentUpon>UsersControl.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\aboutUs.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\aboutUs.Designer.cs">
+      <DependentUpon>aboutUs.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Forms\AddDrug.resx">
@@ -276,6 +282,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\UsersControl.resx">
       <DependentUpon>UsersControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\aboutUs.resx">
+      <DependentUpon>aboutUs.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

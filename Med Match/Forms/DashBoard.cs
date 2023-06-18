@@ -228,7 +228,10 @@ namespace Med_Match
 
         private void about_btn_Click(object sender, EventArgs e)
         {
+            _ِaboutUs uc = new _ِaboutUs();
+            addUsercontrol(uc);
             btn(sender, e);
+            label1.Text = "About Us";
         }
 
         private void logout_btn_Click(object sender, EventArgs e)
