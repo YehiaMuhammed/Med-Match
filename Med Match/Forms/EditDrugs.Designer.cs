@@ -119,6 +119,7 @@
             // 
             // save_btn
             // 
+            this.save_btn.BackColor = System.Drawing.Color.LimeGreen;
             this.save_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.save_btn.Font = new System.Drawing.Font("Bebas Neue", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.save_btn.Location = new System.Drawing.Point(625, 559);
@@ -126,7 +127,7 @@
             this.save_btn.Size = new System.Drawing.Size(110, 31);
             this.save_btn.TabIndex = 36;
             this.save_btn.Text = "Save";
-            this.save_btn.UseVisualStyleBackColor = true;
+            this.save_btn.UseVisualStyleBackColor = false;
             this.save_btn.Click += new System.EventHandler(this.save_btn_Click);
             // 
             // panel4
